@@ -1,7 +1,7 @@
 /*!
 Theme Name: Awareness Akademie
 Author: Defrost Studio
-Version: 2.0.0
+Version: 3.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -58,6 +58,8 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 }
+
+
 
 /* Sections
 	 ========================================================================== */
@@ -470,8 +472,8 @@ optgroup,
 textarea {
 	color: #000000;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 18px;
-	line-height: 24px;
+	font-size: 20px;
+	line-height: 26px;
 }
 
 h1,
@@ -507,9 +509,9 @@ h3 {
 
 p {
 	margin-block-start: 0;
-	margin-block-end: 24px;
+	margin-block-end: 26px;
 	margin-top: 0;
-	margin-bottom: 24px;
+	margin-bottom: 26px;
 }
 
 dfn,
@@ -1123,6 +1125,10 @@ textarea {
 	overflow-y: hidden !important;
 }
 
+:lang(de-DE) {
+	overflow-wrap: break-word;
+}
+
 :lang(de-DE) .english {
 	display: none !important;
 }
@@ -1269,11 +1275,15 @@ section {
 }
 
 .secondary {
-	margin-bottom: 10vh;
+	margin-bottom: 0;
 }
 
 section:nth-last-child(1) {
 	margin-bottom: -10px;
+}
+
+.home section:nth-last-child(1) {
+	margin-bottom: 10vh;
 }
 
 .ressourcen {
@@ -1427,6 +1437,16 @@ section.swiper {
 	padding: 0 3vw;
 }
 
+.form .col-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 0;
+	place-items: center;
+	text-align: left;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
 .col-2 .left small {
 	text-transform: uppercase;
 	margin-block-start: 0;
@@ -1496,6 +1516,10 @@ section.swiper {
 
 	border-top: 1px solid #000000;
 	border-bottom: 1px solid #000000;
+}
+
+.home .box-2 {
+	margin-top: -5vh;
 }
 
 .box-2 div {
@@ -1570,7 +1594,7 @@ section.swiper {
 
 .swiper-slide {
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
 	background: #fff;
 	width: 80%;
 
@@ -1635,11 +1659,24 @@ section.swiper {
 
 .hero {
 	width: 100vw;
+	height: 50vh;
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .hero img {
 	width: 100% !important;
 	height: 50vh !important;
+}
+
+.sectiontitle {
+	width: 100vw;
+	height: auto;
+}
+
+.tertiary .hero {
+	border-bottom: 1px solid #000;
 }
 
 /*--------------------------------------------------------------
@@ -1712,7 +1749,7 @@ section.swiper {
 
 .form .text-area {
 	grid-column-start: 1;
-	grid-column-end: 3;
+	grid-column-end: 2;
 	border-bottom: 0;
 }
 
@@ -1813,7 +1850,7 @@ section.swiper {
 	grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
 	grid-auto-rows: auto;
 	grid-template-rows: auto;
-	column-gap: 24px;
+	column-gap: 26px;
 	row-gap: 65px;
 }
 
@@ -1821,7 +1858,7 @@ section.swiper {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 	grid-template-rows: auto;
-	column-gap: 24px;
+	column-gap: 26px;
 	row-gap: 21px;
 }
 
@@ -1829,7 +1866,7 @@ section.swiper {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 	grid-template-rows: auto;
-	column-gap: 24px;
+	column-gap: 26px;
 	row-gap: 21px;
 }
 
@@ -1838,7 +1875,7 @@ section.swiper {
 .featured-posts-4 article {
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: auto;
+	grid-template-rows: 1fr 0.5fr;
 	row-gap: 26px;
 }
 
@@ -1958,13 +1995,13 @@ section.swiper {
 	border-bottom: 1px solid #000000;
 }
 
-.page-template-roundtables .post-grid .hero .title,
-.page-template-angebote .post-grid .hero .title {
+.page-template-roundtables .post-grid .sectiontitle .title,
+.page-template-angebote .post-grid .sectiontitle .title {
 	border-bottom: 1px solid #000000;
 }
 
-.page-template-roundtables .post-grid .hero small,
-.page-template-angebote .post-grid .hero small {
+.page-template-roundtables .post-grid .sectiontitle small,
+.page-template-angebote .post-grid .sectiontitle small {
 	margin-left: 3vw;
 }
 
@@ -1972,6 +2009,7 @@ section.swiper {
 .page-template-angebote .post-grid .col-3 {
 	display: grid;
     grid-template-columns: 1fr 1fr 2fr;
+	column-gap: 26px;
 	place-items: flex-start;
 	border: 0 !important;
 }
@@ -2113,6 +2151,10 @@ section.swiper {
 	text-decoration: underline;
 }
 
+.page-template-ressourcen .title {
+	margin-top: 26px;
+}
+
 
 /*--------------------------------------------------------------
 # Glossar
@@ -2229,6 +2271,10 @@ section.swiper {
 --------------------------------------------------------------*/
 .single .entry-title {
     line-height: 3rem;
+}
+
+.single .teaser-summary {
+	margin-top: 3rem;
 }
 
 .single .col-2 div:nth-child(2) {
@@ -2568,7 +2614,7 @@ section.swiper {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 		grid-template-rows: auto;
-		column-gap: 24px;
+		column-gap: 26px;
 		row-gap: 28px;
 	}
 
@@ -2576,7 +2622,7 @@ section.swiper {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-template-rows: auto;
-		column-gap: 24px;
+		column-gap: 26px;
 		row-gap: 0;
 	}
 
@@ -2586,13 +2632,13 @@ section.swiper {
 		height: 250px;
 	}
 
-	.col-3 {
+	/* .col-3 {
 		display: flex;
 		flex-direction: column;
 		padding: 0 0 5% 0;
 		border-top: 0;
 		border-bottom: 0;
-	}
+	} */
 
 	.page-template-roundtables .col-3,
 	.page-template-angebote .col-3 {
@@ -2607,13 +2653,13 @@ section.swiper {
 		padding: 10px 3vw;
 	}
 
-	.col-3 div:nth-child(1) {
+	/* .col-3 div:nth-child(1) {
 		border-right: 0;
 	}
 
 	.col-3 div:nth-child(3) {
 		border-left: 0;
-	}
+	} */
 
 	/*--------------------------------------------------------------
 	## Home
@@ -2877,10 +2923,17 @@ section.swiper {
 	}
 
 	.col-2,
+	.form .col-2,
 	.col-3,
 	.col-4 {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.form .col-2 {
+		display: flex;
+		flex-direction: column;
+		padding: 5% 0;
 	}
 
 	.col-4 {
@@ -2893,7 +2946,7 @@ section.swiper {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-template-rows: auto;
-		column-gap: 24px;
+		column-gap: 26px;
 		row-gap: 28px;
 	}
 
@@ -3040,8 +3093,8 @@ section.swiper {
 
 	.col-3 {
 		padding: 0 0 5% 0;
-		border-top: 0;
-		border-bottom: 0;
+		/* border-top: 0;
+		border-bottom: 0; */
 	}
 
 	.page-template-roundtables .col-3,
@@ -3059,10 +3112,12 @@ section.swiper {
 
 	.col-3 div:nth-child(1) {
 		border-right: 0;
+		border-bottom: 1px solid #000;
 	}
 
 	.col-3 div:nth-child(3) {
 		border-left: 0;
+		border-top: 1px solid #000;;
 	}
 
 	/*--------------------------------------------------------------
@@ -3175,6 +3230,19 @@ section.swiper {
 		width: 100%;
 		border-bottom: 0;
 		border-right: 0;
+	}
+
+	.form input[type="submit"] {
+		text-transform: uppercase;
+		color: #000000;
+		padding: 3vw;
+		border-top: 1px solid #000000;
+		border-left: 1px solid #000000;
+		border-radius: 0;
+		outline: 0;
+		background-color: #ffffff;
+		transition: all 0.2s linear;
+		width: 94vw;
 	}
 
 	.page-template-ressourcen .form {
@@ -3589,8 +3657,8 @@ section.swiper {
 
 	.col-3 {
 		padding: 0 0 5% 0;
-		border-top: 0;
-		border-bottom: 0;
+		/* border-top: 0;
+		border-bottom: 0; */
 	}
 
 	.col-3 div:nth-child(1) {

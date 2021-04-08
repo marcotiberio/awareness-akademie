@@ -206,18 +206,12 @@ get_header();
 					</section>
 				<?php endif; ?>
 				<?php if( get_row_layout() == 'hero_image' ): ?>
-					<section class="hero">
-						<?php 
-						$image = get_sub_field('image');
-						if( !empty( $image ) ): ?>
-							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-						<?php endif; ?>
-					</section>
+					<section class="hero" style="background-image: url('<?php the_sub_field('image'); ?>');"></section>
 				<?php endif; ?>
 				<?php if( get_row_layout() == 'contact-form' ): ?>
-					<div>
+					<section class="contact-form">
 						<?php the_sub_field('shortcode_text'); ?>
-					</div>
+					</section>
 				<?php endif; ?>
 			<?php endwhile; ?>
 		<?php endif; ?>

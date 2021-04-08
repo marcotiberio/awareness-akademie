@@ -41,9 +41,9 @@ get_header();
 					<section class="col-3">
 						<div>
 							<small><?php the_sub_field('left_title'); ?></small>
-							<?php 
+							<?php
 							$link = get_sub_field('left');
-							if( $link ): 
+							if( $link ):
 								$link_url = $link['url'];
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
@@ -53,9 +53,9 @@ get_header();
 						</div>
 						<div>
 							<small><?php the_sub_field('center_title'); ?></small>
-							<?php 
+							<?php
 							$link = get_sub_field('center');
-							if( $link ): 
+							if( $link ):
 								$link_url = $link['url'];
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
@@ -65,9 +65,9 @@ get_header();
 						</div>
 						<div>
 							<small><?php the_sub_field('right_title'); ?></small>
-							<?php 
+							<?php
 							$link = get_sub_field('right');
-							if( $link ): 
+							if( $link ):
 								$link_url = $link['url'];
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
@@ -83,12 +83,11 @@ get_header();
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<?php if( have_rows('slideshow') ): ?>
-									<?php while( have_rows('slideshow') ): the_row(); 
+									<?php while( have_rows('slideshow') ): the_row();
 
 										// Load sub field value.
 										$image = get_sub_field('image');
 										?>
-										
 											<div class="swiper-slide">
 												<img src="<?php echo esc_url( $image['url'] ); ?>" alt="">
 											</div>
@@ -107,9 +106,8 @@ get_header();
 					<section class="col-1">
 						<div class="header">
 							<small><?php the_sub_field('title'); ?></small>
-							<?php 
-							$link = get_sub_field('link_to_all');
-							if( $link ): 
+							<?php
+							if( $link ):
 								$link_url = $link['url'];
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
@@ -121,22 +119,15 @@ get_header();
 					</section>
 				<?php endif; ?>
 				<?php if( get_row_layout() == 'contact-form' ): ?>
-					<div>
+					<section class="contact-form">
 						<?php the_sub_field('shortcode_text'); ?>
-					</div>
+					</section>
 				<?php endif; ?>
 				<?php if( get_row_layout() == 'hero_image' ): ?>
-					<section class="hero">
-						<?php 
-						$image = get_sub_field('image');
-						if( !empty( $image ) ): ?>
-							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-						<?php endif; ?>
-					</section>
+					<section class="hero" style="background-image: url('<?php the_sub_field('image'); ?>');"></section>
 				<?php endif; ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
-		
 	</main><!-- #main -->
 
 <?php

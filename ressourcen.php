@@ -48,9 +48,9 @@ get_header();
 						<div class="left">
 							<div class="inner">
 								<article class="header element"><?php the_sub_field('left_header'); ?></article>
-								<?php 
+								<?php
 								$link = get_sub_field('left_title');
-								if( $link ): 
+								if( $link ):
 									$link_url = $link['url'];
 									$link_title = $link['title'];
 									$link_target = $link['target'] ? $link['target'] : '_self';
@@ -60,9 +60,9 @@ get_header();
 								<p class="subtitle element"><?php the_sub_field('left_subtitle'); ?></p>
 								<div class="buttons element">
 									<p class="reservation"><?php the_sub_field('left_button_reservation'); ?></p>
-									<?php 
+									<?php
 									$link = get_sub_field('left_button_redirect');
-									if( $link ): 
+									if( $link ):
 										$link_url = $link['url'];
 										$link_title = $link['title'];
 										$link_target = $link['target'] ? $link['target'] : '_self';
@@ -75,9 +75,9 @@ get_header();
 						<div class="right">
 							<div class="inner">
 								<article class="header element"><?php the_sub_field('right_header'); ?></article>
-								<?php 
+								<?php
 								$link = get_sub_field('right_title');
-								if( $link ): 
+								if( $link ):
 									$link_url = $link['url'];
 									$link_title = $link['title'];
 									$link_target = $link['target'] ? $link['target'] : '_self';
@@ -86,9 +86,9 @@ get_header();
 								<?php endif; ?>
 								<p class="subtitle element"><?php the_sub_field('right_subtitle'); ?></p>
 								<div class="buttons element">
-									<?php 
+									<?php
 									$link = get_sub_field('right_button_redirect');
-									if( $link ): 
+									if( $link ):
 										$link_url = $link['url'];
 										$link_title = $link['title'];
 										$link_target = $link['target'] ? $link['target'] : '_self';
@@ -122,12 +122,12 @@ get_header();
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<?php if( have_rows('slideshow') ): ?>
-									<?php while( have_rows('slideshow') ): the_row(); 
+									<?php while( have_rows('slideshow') ): the_row();
 
 										// Load sub field value.
 										$image = get_sub_field('image');
 										?>
-										
+
 											<div class="swiper-slide">
 												<img src="<?php echo esc_url( $image['url'] ); ?>" alt="">
 											</div>
@@ -149,13 +149,7 @@ get_header();
 					</section>
 				<?php endif; ?>
 				<?php if( get_row_layout() == 'hero_image' ): ?>
-					<section class="hero">
-						<?php 
-						$image = get_sub_field('image');
-						if( !empty( $image ) ): ?>
-							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-						<?php endif; ?>
-					</section>
+					<section class="hero" style="background-image: url('<?php the_sub_field('image'); ?>');"></section>
 				<?php endif; ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
@@ -175,7 +169,7 @@ get_header();
 			<section class="ressourcen">
 				<div class="repeater">
 					<?php if( have_rows('repeater') ): ?>
-						<?php while( have_rows('repeater') ): the_row(); 
+						<?php while( have_rows('repeater') ): the_row();
 							$title = get_sub_field('title');
 							$link = get_sub_field('link');
 							$type = get_sub_field('type');
@@ -186,20 +180,17 @@ get_header();
 									<small><?php the_sub_field('type'); ?></small>
 									<small><?php the_sub_field('category'); ?></small>
 								</article>
-								<p class="title">
-									<h3><?php the_sub_field('title'); ?></h3>
-								</p>
-								<p class="button">
-								<?php 
-								$link = get_sub_field('link');
-								if( $link ): 
-									$link_url = $link['url'];
-									$link_title = $link['title'];
-									$link_target = $link['target'] ? $link['target'] : '_self';
+								<div class="title">
+									<?php
+									$link = get_sub_field('title');
+									if( $link ):
+										$link_url = $link['url'];
+										$link_title = $link['title'];
+										$link_target = $link['target'] ? $link['target'] : '_self';
 									?>
-									<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-								<?php endif; ?>
-								</p>
+									<h3><a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></h3>
+									<?php endif; ?>
+								</div>
 							</div>
 						<?php endwhile; ?>
 					<?php endif; ?>
@@ -313,12 +304,12 @@ get_header();
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
 									<?php if( have_rows('slideshow') ): ?>
-										<?php while( have_rows('slideshow') ): the_row(); 
+										<?php while( have_rows('slideshow') ): the_row();
 
 											// Load sub field value.
 											$image = get_sub_field('image');
 											?>
-											
+
 												<div class="swiper-slide">
 													<img src="<?php echo esc_url( $image['url'] ); ?>" alt="">
 												</div>
@@ -339,18 +330,12 @@ get_header();
 						</section>
 					<?php endif; ?>
 					<?php if( get_row_layout() == 'contact-form' ): ?>
-						<div>
+						<section class="contact-form">
 							<?php the_sub_field('shortcode_text'); ?>
-						</div>
+						</section>
 					<?php endif; ?>
 					<?php if( get_row_layout() == 'hero_image' ): ?>
-						<section class="hero">
-							<?php 
-							$image = get_sub_field('image');
-							if( !empty( $image ) ): ?>
-								<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-							<?php endif; ?>
-						</section>
+						<section class="hero" style="background-image: url('<?php the_sub_field('image'); ?>');"></section>
 					<?php endif; ?>
 				<?php endwhile; ?>
 			<?php endif; ?>

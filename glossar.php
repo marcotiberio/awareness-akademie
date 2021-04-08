@@ -33,7 +33,7 @@ get_header();
 							?>
 							<div class="col-4">
 								<div></div>
-								<div class="term">
+								<div class="term" id="<?php the_sub_field('term'); ?>">
 									<article class="header">
 										<p><?php the_sub_field('term'); ?></p>
 									</article>
@@ -119,7 +119,7 @@ get_header();
 							<div class="col-4">
 								<div></div>
 								<div class="term">
-									<article class="header">
+									<article class="header" id="<?php the_sub_field('term'); ?>">
 										<p><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>

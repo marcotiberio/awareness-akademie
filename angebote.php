@@ -149,18 +149,12 @@ get_header();
 					</section>
 				<?php endif; ?>
 				<?php if( get_row_layout() == 'hero_image' ): ?>
-					<section class="hero">
-						<?php 
-						$image = get_sub_field('image');
-						if( !empty( $image ) ): ?>
-							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-						<?php endif; ?>
-					</section>
+					<section class="hero" style="background-image: url('<?php the_sub_field('image'); ?>');"></section>
 				<?php endif; ?>
 				<?php if( get_row_layout() == 'contact-form' ): ?>
-					<div>
+					<section class="contact-form">
 						<?php the_sub_field('shortcode_text'); ?>
-					</div>
+					</section>
 				<?php endif; ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
@@ -170,10 +164,10 @@ get_header();
 			<section class="post-grid">
 
 				<section class="future">
-					<div class="hero">
+					<div class="sectiontitle">
 						<div class="title german"><small>KOMMENDE</small></div>
 						<div class="title english"><small>COMING</small></div>
-						<img src="/wp-content/uploads/2021/03/AWA_Gradient_web-scaled.jpg" />
+						<section class="hero" style="background-image: url('/wp-content/uploads/2021/03/AWA_Gradient_web-scaled.jpg');"></section>
 					</div>
 					<?php
 					$today = date('Y-m-d', strtotime('+2 hours'));
@@ -222,7 +216,7 @@ get_header();
 					?>
 				</section>
 				<section class="past">
-					<div class="hero">
+					<div class="sectiontitle">
 						<div class="title german"><small>VERGANGENE</small></div>
 						<div class="title english"><small>PAST</small></div>
 					</div>

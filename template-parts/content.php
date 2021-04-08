@@ -32,8 +32,18 @@
 			<?php if( get_field('roundtable_subtitle') ): ?>
 				<?php the_field('roundtable_subtitle'); ?>
 			<?php endif; ?>
+			<?php if( get_field('roundtable_summary') ): ?>
+				<div class="teaser-summary">
+					<?php the_field('roundtable_summary'); ?>
+				</div>
+			<?php endif; ?>
 			<?php if( get_field('angebote_subtitle') ): ?>
 				<?php the_field('angebote_subtitle'); ?>
+			<?php endif; ?>
+			<?php if( get_field('angebote_summary') ): ?>
+				<div class="teaser-summary">
+					<?php the_field('angebote_summary'); ?>
+				</div>
 			<?php endif; ?>
 		</div>
 	</div><!-- .entry-header -->
@@ -44,7 +54,7 @@
 
 	<div class="main-content">
 		<div class="col-3">
-			<div></div>
+			<div style="border-bottom: 0;"></div>
 			<div>
 				<?php the_content(); ?>
 				<?php if( have_rows('flexible_post') ): ?>
@@ -66,7 +76,7 @@
 				<?php endif; ?>
 			</div>
 			<div class="image-gallery">
-				<?php 
+				<?php
 					$images = get_field('gallery');
 					if( $images ): ?>
 						<div class="grid">
@@ -74,11 +84,11 @@
 								<img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 							<?php endforeach; ?>
 						</div>
-					<?php endif; 
+					<?php endif;
 				?>
 			</div>
 		</div>
-		
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
