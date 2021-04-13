@@ -17,20 +17,22 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<section class="blob">
-			<div class="blob-layer blob-layer__0" data-blob-disallow="y" data-blob-deep="1000"></div>
-			<div class="blob-layer blob-layer__1" data-blob-deep="60"></div>
-			<div class="blob-layer blob-layer__2" data-blob-deep="120"></div>
-			<div class="blob-layer blob-layer__3" data-blob-deep="180"></div>
-			<div class="blob-layer blob-layer__4" data-blob-deep="240"></div>
-			<div class="blob-layer blob-layer__5" data-blob-deep="300"></div>
-			<div class="blob-layer blob-layer__6" data-blob-deep="360"></div>
-			<div class="blob-layer blob-layer__7" data-blob-deep="420"></div>
-			<div class="blob-layer blob-layer__8" data-blob-deep="480"></div>
-			<?php if( get_field('hero_text') ): ?>
-				<h2 class="hero-title"><?php the_field('hero_text'); ?></h2>
-			<?php endif; ?>
-		</section>
+		<?php
+		$bubbles = get_field('bubbles');
+		if( $bubbles ): ?>
+			<section class="blob">
+				<div class="blob-layer blob-layer__0" data-blob-disallow="y" data-blob-deep="1000" style="background-image: url('<?php echo esc_url( $bubbles['background_bubble']['url'] ); ?>')"></div>
+				<div class="blob-layer blob-layer__1" data-blob-deep="60" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer1']['url'] ); ?>')"></div>
+				<div class="blob-layer blob-layer__2" data-blob-deep="120" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer2']['url'] ); ?>')"></div>
+				<div class="blob-layer blob-layer__3" data-blob-deep="180" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer3']['url'] ); ?>')"></div>
+				<div class="blob-layer blob-layer__4" data-blob-deep="240" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer4']['url'] ); ?>')"></div>
+				<div class="blob-layer blob-layer__5" data-blob-deep="300" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer5']['url'] ); ?>')"></div>
+				<div class="blob-layer blob-layer__6" data-blob-deep="360" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer6']['url'] ); ?>')"></div>
+				<div class="blob-layer blob-layer__7" data-blob-deep="420" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer7']['url'] ); ?>')"></div>
+				<div class="blob-layer blob-layer__8" data-blob-deep="480" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer8']['url'] ); ?>')"></div>
+				<h2 class="hero-title"><?php echo $bubbles['hero_text']; ?></h2>
+			</section>
+		<?php endif; ?>
 
 		<?php if( have_rows('flexible') ): ?>
 			<?php while( have_rows('flexible') ): the_row(); ?>
@@ -168,12 +170,12 @@ get_header();
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
 								<?php if( have_rows('slideshow') ): ?>
-									<?php while( have_rows('slideshow') ): the_row(); 
+									<?php while( have_rows('slideshow') ): the_row();
 
 										// Load sub field value.
 										$image = get_sub_field('image');
 										?>
-										
+
 											<div class="swiper-slide">
 												<img src="<?php echo esc_url( $image['url'] ); ?>" alt="">
 											</div>
