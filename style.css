@@ -1,7 +1,7 @@
 /*!
 Theme Name: Awareness Akademie
 Author: Defrost Studio
-Version: 3.0.1
+Version: 3.2.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1403,7 +1403,7 @@ section:nth-last-child(1) {
 	color: #ffffff;
 	z-index: 5000;
 
-	text-shadow: 5px -5px 5px #000;
+	text-shadow: 5px -2.5px 5px #000;
 }
 
 /*--------------------------------------------------------------
