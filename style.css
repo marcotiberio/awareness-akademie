@@ -1,7 +1,7 @@
 /*!
-Theme Name: Awareness Akademie - Dev
+Theme Name: Awareness Akademie
 Author: Defrost Studio
-Version: 3.0.0
+Version: 3.1.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1399,6 +1399,7 @@ section:nth-last-child(1) {
 	width: 100vw;
 	padding-left: 3vw;
 	padding-right: 25vw;
+	font-size: 50px;
 	color: #ffffff;
 	z-index: 5000;
 }

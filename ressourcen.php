@@ -174,6 +174,7 @@ get_header();
 							$link = get_sub_field('link');
 							$type = get_sub_field('type');
 							$category = get_sub_field('category');
+							$tags = get_sub_field('tags');
 							?>
 							<div class="inner <?php the_sub_field('category'); ?>">
 								<article class="header">
@@ -191,6 +192,11 @@ get_header();
 									<h3><a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></h3>
 									<?php endif; ?>
 								</div>
+								<?php if( get_sub_field('tags') ): ?>
+								<div class="tags">
+									<small><?php the_sub_field('tags'); ?></small>
+								</div>
+								<?php endif; ?>
 							</div>
 						<?php endwhile; ?>
 					<?php endif; ?>
