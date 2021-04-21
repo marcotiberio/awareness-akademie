@@ -30,7 +30,7 @@ get_header();
 				<div class="blob-layer blob-layer__6" data-blob-deep="360" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer6']['url'] ); ?>')"></div>
 				<div class="blob-layer blob-layer__7" data-blob-deep="420" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer7']['url'] ); ?>')"></div>
 				<div class="blob-layer blob-layer__8" data-blob-deep="480" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer8']['url'] ); ?>')"></div>
-				<h2 class="hero-title"><?php echo $bubbles['hero_text']; ?></h2>
+				<h1 class="hero-title"><?php echo $bubbles['hero_text']; ?></h1>
 			</section>
 		<?php endif; ?>
 

@@ -1,5 +1,5 @@
 /*!
-Theme Name: Awareness Akademie
+Theme Name: Awareness Akademie - Dev
 Author: Defrost Studio
 Version: 3.2.0
 Tested up to: 5.4
@@ -805,6 +805,10 @@ textarea {
 	text-transform: uppercase;
 }
 
+.current-menu-item {
+	text-decoration: underline;
+}
+
 .main-navigation a,
 .footer-menu a {
 	display: block;
@@ -1398,12 +1402,11 @@ section:nth-last-child(1) {
 .hero-title {
 	width: 100vw;
 	padding-left: 3vw;
-	padding-right: 25vw;
-	font-size: 50px;
+	padding-right: 30vw;
 	color: #ffffff;
 	z-index: 5000;
 
-	text-shadow: 5px -2.5px 5px #000;
+	/* text-shadow: 5px -2.5px 5px #000; */
 }
 
 /*--------------------------------------------------------------
