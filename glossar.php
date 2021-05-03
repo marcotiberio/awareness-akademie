@@ -35,7 +35,7 @@ get_header();
 								<div></div>
 								<div class="term" id="<?php the_sub_field('term'); ?>">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -64,7 +64,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -92,7 +92,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -119,8 +119,8 @@ get_header();
 							<div class="col-4">
 								<div></div>
 								<div class="term">
-									<article class="header" id="<?php the_sub_field('term'); ?>">
-										<p><?php the_sub_field('term'); ?></p>
+									<article class="header">
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -148,7 +148,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -176,7 +176,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -204,7 +204,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -232,7 +232,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -260,7 +260,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -288,7 +288,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -316,7 +316,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -344,7 +344,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -372,7 +372,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -400,7 +400,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -428,7 +428,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -456,7 +456,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -484,7 +484,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -512,7 +512,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -540,7 +540,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -568,7 +568,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -596,7 +596,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -624,7 +624,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -652,7 +652,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -680,7 +680,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -708,7 +708,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -727,7 +727,7 @@ get_header();
 			<div class="panel letmeseeit">
 				<div class="within">
 					<?php if( have_rows('repeater', 205) ): ?>
-						<?php while( have_rows('repeater', 205) ): the_row(); 
+						<?php while( have_rows('repeater', 205) ): the_row();
 							$letter = get_sub_field('letter');
 							$term = get_sub_field('term');
 							$description = get_sub_field('description');
@@ -736,7 +736,7 @@ get_header();
 								<div></div>
 								<div class="term">
 									<article class="header">
-										<p><?php the_sub_field('term'); ?></p>
+										<p id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></p>
 									</article>
 								</div>
 								<article class="description">
@@ -747,7 +747,7 @@ get_header();
 					<?php endif; ?>
 				</div>
 			</div>
-			
+
 		</section>
 
 

@@ -2268,6 +2268,10 @@ section.swiper {
 	text-transform: uppercase;
 }
 
+.page-template-netzwerk .repeater .tags small {
+	margin: 0;
+}
+
 .page-template-netzwerk section {
 	margin-bottom: 10vh;
 }
