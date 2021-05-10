@@ -156,14 +156,25 @@ get_header();
 
 		<div class="secondary">
 			<div class="entry-header">
-				<div class="filters">
-					<small class="alle german">Alle</small>
-					<small class="alle english">All</small>
-					<small class="awareness german">Awareness</small>
-					<small class="awareness english">Awareness</small>
-					<small class="antirassismus german">Antirassismus</small>
-					<small class="antirassismus english">Antiracism</small>
-				</div>
+				<div id="resetFilters">Alle</div>
+				<details class="categories">
+					<summary>Categories</summary>
+					<ul class="filters">
+						<?php if( have_rows('filters') ): ?>
+							<?php while( have_rows('filters') ): the_row();
+								$category = get_sub_field('category');
+								?>
+								<li class="filter">
+									<input type="checkbox" class="filtercheck" id="<?php the_sub_field('category'); ?>" />
+									<label for="<?php the_sub_field('category'); ?>">
+										<small class="<?php the_sub_field('category'); ?>"><?php the_sub_field('category'); ?></small>
+									</label>
+								</li>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</ul>
+					<button id="applyFilters">Apply</button>
+				</details>
 			</div><!-- .entry-header -->
 
 			<section class="ressourcen">

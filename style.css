@@ -1,7 +1,7 @@
 /*!
 Theme Name: Awareness Akademie - Dev
 Author: Defrost Studio
-Version: 3.2.0
+Version: 3.3.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -230,6 +230,10 @@ samp {
 small {
 	text-transform: uppercase;
 	font-size: 83.5%;
+}
+
+.page-template-ressourcen .repeater .tags small {
+	text-transform: capitalize;
 }
 
 /**
@@ -2130,20 +2134,45 @@ section.swiper {
 --------------------------------------------------------------*/
 
 .page-template-ressourcen .entry-header {
-	text-transform: uppercase;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	margin-bottom: 25px;
-	padding: 0 3vw;
+    display: flex;
+	flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+    margin-bottom: 25px;
+    padding: 0 3vw;
+    text-transform: uppercase;
+}
+
+.page-template-ressourcen .entry-header summary {
+    text-align: right;
+}
+
+.page-template-ressourcen .entry-header summary:hover {
+    cursor: pointer;
+	text-decoration: underline;
+}
+
+.page-template-ressourcen .entry-header #resetFilters:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.page-template-ressourcen .entry-header #applyFilters {
+	float: right;
 }
 
 .page-template-ressourcen .entry-header .filters {
-	grid-column-start: 2;
+	grid-column-start: 1;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-end;
+	list-style: none;
 	place-items: flex-start;
+}
+
+.page-template-ressourcen .entry-header .filters .filter {
+	padding: 0 0 0 30px;
 }
 
 .page-template-ressourcen .entry-header .filters small {
@@ -2157,9 +2186,57 @@ section.swiper {
 	text-decoration: underline;
 }
 
+.page-template-ressourcen .entry-header .filters input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 140px;
+	height: 100px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+input[type=checkbox]:checked ~ label {
+	text-decoration: underline;
+  }
+
 .page-template-ressourcen .title {
 	margin-top: 26px;
 }
+
+.page-template-ressourcen details[open] summary ~ * {
+	animation: sweep .1s ease-in-out;
+  }
+
+  @keyframes sweep {
+	0%    {opacity: 0; margin-top: -10px}
+	100%  {opacity: 1; margin-top: 0px}
+  }
+
+
+/* NEW */
+
+/* .page-template-ressourcen section.ressourcen {
+	border-top: 0;
+	border-bottom: 0;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+	grid-template-rows: auto;
+
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
+
+.page-template-ressourcen section.ressourcen article {
+	border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5% 3vw;
+}
+
+.page-template-ressourcen section.ressourcen article .post-tags {
+	text-transform: capitalize;
+} */
 
 
 /*--------------------------------------------------------------
@@ -2261,6 +2338,10 @@ section.swiper {
 .page-template-netzwerk .secondary small {
 	text-transform: uppercase;
 	margin: 0 3vw;
+}
+
+.page-template-netzwerk .secondary .tags small {
+	text-transform: capitalize;
 }
 
 .page-template-netzwerk .repeater .title {
@@ -3759,7 +3840,7 @@ section.swiper {
 	.page-template-ressourcen .entry-header {
 		text-transform: uppercase;
 		display: grid;
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr 1fr;
 		margin-bottom: 25px;
 		padding: 0 3vw;
 	}
