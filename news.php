@@ -22,8 +22,8 @@ get_header();
 			<div class="filters">
 				<small class="alle german">Alle</small>
 				<small class="alle english">All</small>
-				<small class="awareness-akademie german">Awarennes Akademie</small>
-				<small class="awareness-akademie english">Awarennes Akademie</small>
+				<small class="awareness-akademie german">Awareness Akademie</small>
+				<small class="awareness-akademie english">Awareness Akademie</small>
 				<small class="dab german">Dab</small>
 				<small class="dab english">Dab</small>
 				<small class="sexism-free-night german">Sexism Free Night</small>

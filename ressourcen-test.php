@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Ressourcen
+ * Template Name: Ressourcen Test
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -155,66 +155,49 @@ get_header();
 		<?php endif; ?>
 
 		<div class="secondary">
-			<div class="entry-header">
-				<div id="resetFilters">Alle</div>
-				<details class="categories">
-					<summary>
-						<small class="german">Thema auswählen</small>
-						<small class="english">Choose topic</small>
-					</summary>
-					<ul class="filters">
-						<?php if( have_rows('filters') ): ?>
-							<?php while( have_rows('filters') ): the_row();
-								$category = get_sub_field('category');
-								?>
-								<li class="filter">
-									<input type="checkbox" class="filtercheck" id="<?php the_sub_field('category'); ?>" />
-									<label for="<?php the_sub_field('category'); ?>">
-										<small class="<?php the_sub_field('category'); ?>"><?php the_sub_field('category'); ?></small>
-									</label>
-								</li>
-							<?php endwhile; ?>
-						<?php endif; ?>
-					</ul>
-					<button id="applyFilters">Apply</button>
-				</details>
-			</div><!-- .entry-header -->
 
 			<section class="ressourcen">
-				<div class="repeater">
-					<?php if( have_rows('repeater') ): ?>
-						<?php while( have_rows('repeater') ): the_row();
-							$title = get_sub_field('title');
-							$link = get_sub_field('link');
-							$type = get_sub_field('type');
-							$category = get_sub_field('category');
-							$tags = get_sub_field('tags');
-							?>
-							<div class="inner <?php the_sub_field('category'); ?>">
-								<article class="header">
-									<small><?php the_sub_field('type'); ?></small>
-									<small><?php the_sub_field('category'); ?></small>
-								</article>
-								<div class="title">
-									<?php
-									$link = get_sub_field('title');
-									if( $link ):
-										$link_url = $link['url'];
-										$link_title = $link['title'];
-										$link_target = $link['target'] ? $link['target'] : '_self';
-									?>
-									<h3><a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></h3>
-									<?php endif; ?>
+
+			<?php
+				$args = array(
+					'post_type' => 'ressourcen',
+					'post_status' => 'publish',
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'posts_per_page' => -1,
+				);
+				$arr_posts = new WP_Query( $args );
+
+				if ( $arr_posts->have_posts() ) :
+
+					while ( $arr_posts->have_posts() ) :
+						$arr_posts->the_post();
+
+						$categories = get_the_category();
+						$cls = '';
+
+						if ( ! empty( $categories ) ) {
+						foreach ( $categories as $cat ) {
+							$cls .= $cat->slug . ' ';
+						}
+						}
+						?>
+
+						<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-image' );?>
+						<article class="<?php echo $cls; ?>" id="post-<?php the_ID(); ?>">
+							<a href="<?php the_permalink(); ?>"><div class="post-thumbnail" id="postThumbnailFront" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: center;"></div></a>
+							<div class="post-info">
+								<div class="post-title">
+									<a href="<?php the_permalink(); ?>"><h3><?php print the_title(); ?></h3></a>
 								</div>
-								<?php if( get_sub_field('tags') ): ?>
-								<div class="tags">
-									<small><?php the_sub_field('tags'); ?></small>
-								</div>
-								<?php endif; ?>
+								<small class="post-tags"><?php the_tags(''); ?></small>
 							</div>
-						<?php endwhile; ?>
-					<?php endif; ?>
-				</div>
+						</article>
+						<?php
+					endwhile;
+				endif;
+			?>
+
 			</section>
 		</div>
 

@@ -155,6 +155,7 @@ function awareness_akademie_scripts() {
 
 	wp_enqueue_script( 'awareness-akademie-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'awareness-akademie-blob', get_template_directory_uri() . '/js/blob.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'awareness-akademie-ressourcen-filters', get_template_directory_uri() . '/js/ressourcen-filters.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'awareness-akademie-script', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

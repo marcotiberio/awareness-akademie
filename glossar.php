@@ -17,6 +17,17 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+		<?php if( have_rows('header') ): ?>
+			<?php while( have_rows('header') ): the_row(); ?>
+				<?php if( get_row_layout() == 'intro' ): ?>
+					<section class="intro row-2">
+						<div class="big"><h3><?php the_sub_field('big'); ?></h3></div>
+						<div class="small"><?php the_sub_field('small'); ?></div>
+					</section>
+				<?php endif; ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
+
 		<section class="glossar">
 
 			<button class="accordion">
@@ -46,8 +57,7 @@ get_header();
 					<?php endif; ?>
 				</div>
 			</div>
-			
-				
+
 		    <button class="accordion">
 				<span>B</span>
 			</button>
@@ -749,6 +759,17 @@ get_header();
 			</div>
 
 		</section>
+
+		<?php if( have_rows('footer') ): ?>
+			<?php while( have_rows('footer') ): the_row(); ?>
+				<?php if( get_row_layout() == 'intro' ): ?>
+					<section class="intro row-2">
+						<div class="big"><h3><?php the_sub_field('big'); ?></h3></div>
+						<div class="small"><?php the_sub_field('small'); ?></div>
+					</section>
+				<?php endif; ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
 
 
 

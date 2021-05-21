@@ -31,7 +31,8 @@ get_header();
 		<div class="secondary">
 
 			<section class="partner">
-				<small>Partner</small>
+				<details>
+				<summary>Partner</summary>
 				<div class="repeater">
 					<?php if( have_rows('partner') ): ?>
 						<?php while( have_rows('partner') ): the_row(); 
@@ -60,10 +61,12 @@ get_header();
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
+				</details>
 			</section>
 
 			<section class="medienpartner">
-				<small>Medienpartner</small>
+				<details>
+				<summary>Medienpartner</summary>
 				<div class="repeater">
 					<?php if( have_rows('medienpartner') ): ?>
 						<?php while( have_rows('medienpartner') ): the_row(); 
@@ -92,10 +95,12 @@ get_header();
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
+				</details>
 			</section>
 
 			<section class="forderpartner">
-				<small>Förderpartner</small>
+				<details>
+				<summary>Förderpartner</summary>
 				<div class="repeater">
 					<?php if( have_rows('forderpartner') ): ?>
 						<?php while( have_rows('forderpartner') ): the_row(); 
@@ -124,10 +129,12 @@ get_header();
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
+				</details>
 			</section>
 
 			<section class="partner1">
-				<small>Partner 1</small>
+				<details>
+				<summary>Partner 1</summary>
 				<div class="repeater">
 					<?php if( have_rows('partner1') ): ?>
 						<?php while( have_rows('partner1') ): the_row(); 
@@ -156,10 +163,12 @@ get_header();
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
+				</details>
 			</section>
 
 			<section class="partner2">
-				<small>Partner 2</small>
+				<details>
+				<summary>Partner 2</summary>
 				<div class="repeater">
 					<?php if( have_rows('partner2') ): ?>
 						<?php while( have_rows('partner2') ): the_row(); 
@@ -188,10 +197,12 @@ get_header();
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
+				</details>
 			</section>
 
 			<section class="partner3">
-				<small>Partner 3</small>
+				<details>
+				<summary>Partner 3</summary>
 				<div class="repeater">
 					<?php if( have_rows('partner3') ): ?>
 						<?php while( have_rows('partner3') ): the_row();
@@ -220,6 +231,7 @@ get_header();
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
+				</details>
 			</section>
 
 		</div>
