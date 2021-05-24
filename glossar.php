@@ -36,8 +36,8 @@ get_header();
 
 			<div class="panel letmeseeit">
 				<div class="within">
-					<?php if( have_rows('repeater', 174) ): ?>
-						<?php while( have_rows('repeater', 174) ): the_row(); 
+					<?php if( have_rows('repeater', 1931) ): ?>
+						<?php while( have_rows('repeater', 1931) ): the_row(); 
 							$letter = get_sub_field('letter');
 							$term = get_sub_field('term');
 							$description = get_sub_field('description');
