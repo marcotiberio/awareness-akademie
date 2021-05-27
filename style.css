@@ -1328,7 +1328,6 @@ summary {
 	justify-content: flex-end;
 	place-items: flex-end;
 	background-color: violet;
-	/* background-image: url('/wp-content/uploads/2021/03/AWA_Gradient_web-scaled.jpg'); */
 	background-size: cover;
 	background-position: center;
 
@@ -1350,62 +1349,53 @@ summary {
 }
 
 .blob-layer__0 {
-	/* background-image: url('/wp-content/uploads/2021/04/hero-home.jpg'); */
 	background-size: cover;
 	margin-left: -5%;
 }
 
 .blob-layer__1 {
-	/* background-image: url('/wp-content/uploads/2021/03/bubble1-e1616489387329.png'); */
 	background-position: 0% 50%;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .blob-layer__2 {
-	/* background-image: url('/wp-content/uploads/2021/03/bubble2.png'); */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .blob-layer__3 {
-	/* background-image: url('/wp-content/uploads/2021/03/bubble3.png'); */
 	background-position: 0% 20%;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .blob-layer__4 {
-	/* background-image: url('/wp-content/uploads/2021/03/bubble4.png'); */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .blob-layer__5 {
-	/* background-image: url('/wp-content/uploads/2021/03/bubble5.png'); */
 	background-position: 100% 100%;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .blob-layer__6 {
-	/* background-image: url('/wp-content/uploads/2021/03/bubble6-1.png'); */
 	background-position: 100% 100%;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .blob-layer__7 {
-	/* background-image: url('/wp-content/uploads/2021/03/bubble7-1.png'); */
 	background-position: 100% 50%;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .blob-layer__8 {
-	/* background-image: url('/wp-content/uploads/2021/03/bubble8-1.png'); */
 	background-position: 0% 30%;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -1419,7 +1409,7 @@ summary {
 	transform: translate(-45%, -45%); */
 	height: 100% !important;
 	width: 100% !important;
-	background-image: url('/wp-content/uploads/2021/03/AWA_Gradient_web-scaled.jpg');
+	background-image: url('https://awareness-akademie.de/wp-content/uploads/sites/14/2021/03/AWA_Gradient_web-scaled-1.jpg');
 }
 
 .hero-title {
