@@ -119,29 +119,7 @@ get_header();
 						<?php the_sub_field('post_grid_text'); ?>
 					</section>
 				<?php endif; ?>
-				<?php if( get_row_layout() == 'shortcode' ): ?>
-					<section class="col-1">
-						<div class="header">
-							<small><?php the_sub_field('title'); ?></small>
-							<?php 
-							$link = get_sub_field('link_to_all');
-							if( $link ): 
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a class="button to-page" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><small><?php echo esc_html( $link_title ); ?></small></a>
-							<?php endif; ?>
-						</div>
-						<?php the_sub_field('shortcode_text'); ?>
-					</section>
-				<?php endif; ?>
 				<?php if( get_row_layout() == 'contact-form' ): ?>
-					<section class="contact-form">
-						<?php the_sub_field('shortcode_text'); ?>
-					</section>
-				<?php endif; ?>
-				<?php if( get_row_layout() == 'shortcode' ): ?>
 					<section class="contact-form">
 						<?php the_sub_field('shortcode_text'); ?>
 					</section>
