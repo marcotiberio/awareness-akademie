@@ -511,6 +511,11 @@ h3 {
 	-webkit-font-smoothing: antialiased;
 }
 
+h4 {
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
 p {
 	margin-block-start: 0;
 	margin-block-end: 26px;
