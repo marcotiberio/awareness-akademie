@@ -76,15 +76,15 @@ body {
 	margin: 0;
 	padding: 0;
 
-	-webkit-animation: fadein 500ms;
+	-webkit-animation: fadein 1000ms;
 	/* Safari, Chrome and Opera > 12.1 */
-	-moz-animation: fadein 500ms;
+	-moz-animation: fadein 1000ms;
 	/* Firefox < 16 */
-	-ms-animation: fadein 500ms;
+	-ms-animation: fadein 1000ms;
 	/* Internet Explorer */
-	-o-animation: fadein 500ms;
+	-o-animation: fadein 1000ms;
 	/* Opera < 12.1 */
-	animation: fadein 500ms;
+	animation: fadein 1000ms;
 }
 
 @keyframes fadein {
