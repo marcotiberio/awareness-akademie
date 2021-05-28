@@ -70,10 +70,12 @@ get_header();
 								</div>
 							</div>
 						</article>
-						<?php
-					endwhile;
-				endif;
-			?>
+						<?php endwhile; ?>
+
+					<!-- reset global post variable. After this point, we are back to the Main Query object -->
+					<?php wp_reset_postdata(); ?>
+
+				<?php endif;?>
 		</section>
 
 		<?php
@@ -83,29 +85,13 @@ get_header();
 			<div class="left">
 				<div class="inner">
 					<div class="sx">
-						<article class="header element"><?php echo esc_html( $boxes['left_header'] ); ?></article>
-						<?php 
-						$link = get_sub_field('left_title');
-						if( $link ): 
-							$link_url = $link['url'];
-							$link_title = $link['title'];
-							$link_target = $link['target'] ? $link['target'] : '_self';
-							?>
-							<a class="button title element" href="<?php echo esc_url( $boxes['link']['url'] ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><h1><?php echo esc_html( $link_title ); ?></h1></a>
-						<?php endif; ?>
-						<p class="subtitle element"><?php the_sub_field('left_subtitle'); ?></p>
+						<article class="header element"><?php echo $boxes['left_header']; ?></article>
+						<a class="button title element" href="<?php echo esc_url( $boxes['left_title']['url'] ); ?>"><h1><?php echo esc_html( $boxes['left_title']['title'] ); ?></h1></a>
+						<p class="subtitle element"><?php echo $boxes['left_subtitle']; ?></p>
 					</div>
 					<div class="dx">
 						<div class="buttons element">
-							<?php 
-							$link = get_sub_field('left_button_redirect');
-							if( $link ): 
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a class="button to-page" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><small><?php echo esc_html( $link_title ); ?></small></a>
-							<?php endif; ?>
+						<a class="button to-page" href="<?php echo esc_url( $boxes['left_button_redirect']['url'] ); ?>"><small><?php echo esc_html( $boxes['left_button_redirect']['title'] ); ?></small></a>
 						</div>
 					</div>
 				</div>
@@ -113,29 +99,13 @@ get_header();
 			<div class="right">
 				<div class="inner">
 					<div class="sx">
-						<article class="header element"><?php the_sub_field('right_header'); ?></article>
-						<?php 
-						$link = get_sub_field('right_title');
-						if( $link ): 
-							$link_url = $link['url'];
-							$link_title = $link['title'];
-							$link_target = $link['target'] ? $link['target'] : '_self';
-							?>
-							<a class="button title element" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><h1><?php echo esc_html( $link_title ); ?></h1></a>
-						<?php endif; ?>
-						<p class="subtitle element"><?php the_sub_field('right_subtitle'); ?></p>
+						<article class="header element"><?php echo $boxes['right_header']; ?></article>
+						<a class="button title element" href="<?php echo esc_url( $boxes['right_title']['url'] ); ?>"><h1><?php echo esc_html( $boxes['right_title']['title'] ); ?></h1></a>
+						<p class="subtitle element"><?php echo $boxes['right_subtitle']; ?></p>
 					</div>
 					<div class="dx">
 						<div class="buttons element">
-							<?php 
-							$link = get_sub_field('right_button_redirect');
-							if( $link ): 
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a class="button to-page" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><small><?php echo esc_html( $link_title ); ?></small></a>
-							<?php endif; ?>
+							<a class="button to-page" href="<?php echo esc_url( $boxes['right_button_redirect']['url'] ); ?>"><small><?php echo esc_html( $boxes['right_button_redirect']['title'] ); ?></small></a>
 						</div>
 					</div>
 				</div>
@@ -153,18 +123,8 @@ get_header();
 		$call_to_action = get_field('call_to_action');
 		if( $call_to_action ): ?>
 		<section class="call-to-action row-2">
-			<h1><?php the_sub_field('header'); ?></h1>
-			<p><?php the_sub_field('sub_header'); ?></p>
-		</section>
-		<?php endif; ?>
-
-
-		<?php
-		$call_to_action_footer = get_field('call_to_action_footer');
-		if( $call_to_action_footer ): ?>
-		<section class="call-to-action row-2">
-			<h1><?php the_sub_field('header'); ?></h1>
-			<p><?php the_sub_field('sub_header'); ?></p>
+			<h1><?php echo $call_to_action['header']; ?></h1>
+			<p><?php echo $call_to_action['sub_header']; ?></p>
 		</section>
 		<?php endif; ?>
 
@@ -172,195 +132,17 @@ get_header();
 		$contact_form = get_field('contact_form');
 		if( $contact_form ): ?>
 		<section class="contact-form">
-			<?php the_sub_field('shortcode_text'); ?>
+			<?php echo $contact_form['shortcode']; ?>
 		</section>
 		<?php endif; ?>
 
-
-
-
-		<?php if( have_rows('flexible') ): ?>
-			<?php while( have_rows('flexible') ): the_row(); ?>
-				<?php if( get_row_layout() == 'title' ): ?>
-					<section class="col-2">
-						<div class="left"><small><?php the_sub_field('left'); ?></small></div>
-						<div class="right"><h1><?php the_sub_field('right'); ?></h1></div>
-					</section>
-				<?php endif; ?>
-				<?php if( get_row_layout() == 'paragraph' ): ?>
-					<section class="col-2">
-						<div class="left"><small><?php the_sub_field('left'); ?></small></div>
-						<div class="right"><?php the_sub_field('right'); ?></div>
-					</section>
-				<?php endif; ?>
-				<?php if( get_row_layout() == 'intro' ): ?>
-					<section class="intro row-2">
-						<div class="big"><?php the_sub_field('big'); ?></div>
-						<div class="small"><?php the_sub_field('small'); ?></div>
-					</section>
-				<?php endif; ?>
-				<?php if( get_row_layout() == 'call_to_action' ): ?>
-					<section class="call-to-action row-2">
-						<h1><?php the_sub_field('header'); ?></h1>
-						<p><?php the_sub_field('sub_header'); ?></p>
-					</section>
-				<?php endif; ?>
-				<?php if( get_row_layout() == 'boxes' ): ?>
-					<section class="box-2">
-						<div class="left">
-							<div class="inner">
-								<div class="sx">
-									<article class="header element"><?php the_sub_field('left_header'); ?></article>
-									<?php 
-									$link = get_sub_field('left_title');
-									if( $link ): 
-										$link_url = $link['url'];
-										$link_title = $link['title'];
-										$link_target = $link['target'] ? $link['target'] : '_self';
-										?>
-										<a class="button title element" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><h1><?php echo esc_html( $link_title ); ?></h1></a>
-									<?php endif; ?>
-									<p class="subtitle element"><?php the_sub_field('left_subtitle'); ?></p>
-								</div>
-								<div class="dx">
-									<div class="buttons element">
-										<?php 
-										$link = get_sub_field('left_button_redirect');
-										if( $link ): 
-											$link_url = $link['url'];
-											$link_title = $link['title'];
-											$link_target = $link['target'] ? $link['target'] : '_self';
-											?>
-											<a class="button to-page" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><small><?php echo esc_html( $link_title ); ?></small></a>
-										<?php endif; ?>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="right">
-							<div class="inner">
-								<div class="sx">
-									<article class="header element"><?php the_sub_field('right_header'); ?></article>
-									<?php 
-									$link = get_sub_field('right_title');
-									if( $link ): 
-										$link_url = $link['url'];
-										$link_title = $link['title'];
-										$link_target = $link['target'] ? $link['target'] : '_self';
-										?>
-										<a class="button title element" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><h1><?php echo esc_html( $link_title ); ?></h1></a>
-									<?php endif; ?>
-									<p class="subtitle element"><?php the_sub_field('right_subtitle'); ?></p>
-								</div>
-								<div class="dx">
-									<div class="buttons element">
-										<?php 
-										$link = get_sub_field('right_button_redirect');
-										if( $link ): 
-											$link_url = $link['url'];
-											$link_title = $link['title'];
-											$link_target = $link['target'] ? $link['target'] : '_self';
-											?>
-											<a class="button to-page" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><small><?php echo esc_html( $link_title ); ?></small></a>
-										<?php endif; ?>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-				<?php endif; ?>
-				<?php if( get_row_layout() == 'contact' ): ?>
-					<section class="col-3">
-						<div>
-							<small><?php the_sub_field('left_title'); ?></small>
-							<?php 
-							$link = get_sub_field('left');
-							if( $link ): 
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><h3><?php echo esc_html( $link_title ); ?></h3></a>
-							<?php endif; ?>
-						</div>
-						<div>
-							<small><?php the_sub_field('center_title'); ?></small>
-							<?php 
-							$link = get_sub_field('center');
-							if( $link ): 
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><h3><?php echo esc_html( $link_title ); ?></h3></a>
-							<?php endif; ?>
-						</div>
-						<div>
-							<small><?php the_sub_field('right_title'); ?></small>
-							<?php 
-							$link = get_sub_field('right');
-							if( $link ): 
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><h3><?php echo esc_html( $link_title ); ?></h3></a>
-							<?php endif; ?>
-						</div>
-					</section>
-				<?php endif; ?>
-				<?php if( get_row_layout() == 'swiper' ): ?>
-					<section class="swiper">
-						<!-- Swiper -->
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<?php if( have_rows('slideshow') ): ?>
-									<?php while( have_rows('slideshow') ): the_row();
-
-										// Load sub field value.
-										$image = get_sub_field('image');
-										?>
-
-											<div class="swiper-slide">
-												<img src="<?php echo esc_url( $image['url'] ); ?>" alt="">
-											</div>
-
-									<?php endwhile; ?>
-								<?php endif; ?>
-							</div>
-							<!-- Add Arrows -->
-							<div class="swiper-button-next"></div>
-							<div class="swiper-button-prev"></div>
-						</div>
-						<!-- Swiper -->
-					</section>
-				<?php endif; ?>
-				<?php if( get_row_layout() == 'post_grid' ): ?>
-					<section class="col-1">
-						<div class="header">
-							<small><?php the_sub_field('title'); ?></small>
-							<?php 
-							$link = get_sub_field('link_to_all');
-							if( $link ): 
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a class="button to-page" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><small><?php echo esc_html( $link_title ); ?></small></a>
-							<?php endif; ?>
-						</div>
-						<?php the_sub_field('post_grid_text'); ?>
-					</section>
-				<?php endif; ?>
-				<?php if( get_row_layout() == 'hero_image' ): ?>
-					<section class="hero" style="background-image: url('<?php the_sub_field('image'); ?>');"></section>
-				<?php endif; ?>
-				<?php if( get_row_layout() == 'contact-form' ): ?>
-					<section class="contact-form">
-						<?php the_sub_field('shortcode_text'); ?>
-					</section>
-				<?php endif; ?>
-			<?php endwhile; ?>
+		<?php
+		$outro = get_field('outro');
+		if( $outro ): ?>
+		<section class="call-to-action row-2">
+			<h1><?php echo $outro['header']; ?></h1>
+			<p><?php echo $outro['sub_header']; ?></p>
+		</section>
 		<?php endif; ?>
 
 	</main><!-- #main -->
