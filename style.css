@@ -1516,6 +1516,7 @@ section.swiper {
 	display: grid;
 	grid-template-columns: 18vw 20vw 44vw 18vw;
 	padding: 0 3vw;
+	column-gap: 30px;
 }
 
 .row-2 {
@@ -1873,7 +1874,7 @@ section.swiper {
 	grid-auto-rows: auto;
 	grid-template-rows: auto;
 	column-gap: 40px;
-	row-gap: 65px;
+	row-gap: 0;
 }
 
 .featured-posts-3 {
@@ -1926,12 +1927,14 @@ section.swiper {
 	display: grid;
 	grid-template-columns: 1fr 4fr;
 	grid-template-rows: auto;
+	column-gap: 20px;
 }
 
 .featured-posts-4 .post-info {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
+	column-gap: 30px;
 }
 
 .featured-posts-2 .post-title h3,
@@ -1972,6 +1975,27 @@ section.swiper {
 --------------------------------------------------------------*/
 
 .home .col-2 {}
+
+/*--------------------------------------------------------------
+# Home New
+--------------------------------------------------------------*/
+
+.page-template-home-new main {
+    margin-top: 110px;
+}
+
+.page-template-home-new section:nth-last-child(1) {
+	margin-bottom: 10vh;
+}
+
+.page-template-home-new .featured-posts-3 {
+	padding: 0 3vw;
+}
+
+.page-template-home-new .featured-posts-4 {
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	padding: 0 3vw;
+}
 
 /*--------------------------------------------------------------
 # News
@@ -2164,12 +2188,12 @@ section.swiper {
 	text-decoration: underline;
 }
 
-.page-template-ressourcen .entry-header #resetFilters:hover {
+.page-template-ressourcen .entry-header .resetFilters:hover {
 	cursor: pointer;
 	text-decoration: underline;
 }
 
-.page-template-ressourcen .entry-header #applyFilters {
+.page-template-ressourcen .entry-header .applyFilters {
 	float: right;
 }
 
@@ -2503,6 +2527,10 @@ summary:hover {
     line-height: 30px;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
+}
+
+.page-template-netzwerk-new .panel {
+	display: none;
 }
 
 .page-template-netzwerk-new .netzwerk .panel .within {
