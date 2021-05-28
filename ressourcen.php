@@ -156,7 +156,8 @@ get_header();
 
 		<div class="secondary">
 			<div class="entry-header">
-				<div id="resetFilters">Alle</div>
+				<div class="resetFilters german">Alle</div>
+				<div class="resetFilters english">All</div>
 				<details class="categories">
 					<summary>
 						<small class="german">Thema auswählen</small>
@@ -176,7 +177,8 @@ get_header();
 							<?php endwhile; ?>
 						<?php endif; ?>
 					</ul>
-					<button id="applyFilters">Apply</button>
+					<button class="applyFilters german">Filtern</button>
+					<button class="applyFilters english">Filter</button>
 				</details>
 			</div><!-- .entry-header -->
 

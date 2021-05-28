@@ -35,7 +35,7 @@ get_header();
 				<h2 class="english">Awareness & Education Collectives</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1373) ): ?>
 						<?php while( have_rows('repeater', 1373) ): the_row();
@@ -70,7 +70,7 @@ get_header();
 				<h2 class="english">Counseling & Contact Points</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1376) ): ?>
 						<?php while( have_rows('repeater', 1376) ): the_row();
@@ -105,7 +105,7 @@ get_header();
 				<h2 class="english">Education & Promotion</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1382) ): ?>
 						<?php while( have_rows('repeater', 1382) ): the_row();
@@ -140,7 +140,7 @@ get_header();
 				<h2 class="english">Community Projects & Networks</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1383) ): ?>
 						<?php while( have_rows('repeater', 1383) ): the_row();
@@ -175,7 +175,7 @@ get_header();
 				<h2 class="english">Databases</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1384) ): ?>
 						<?php while( have_rows('repeater', 1384) ): the_row();
@@ -210,7 +210,7 @@ get_header();
 				<h2 class="english">Health & Safer Use</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1385) ): ?>
 						<?php while( have_rows('repeater', 1385) ): the_row();
@@ -245,7 +245,7 @@ get_header();
 				<h2 class="english">Intersectionality</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1386) ): ?>
 						<?php while( have_rows('repeater', 1386) ): the_row();
@@ -280,7 +280,7 @@ get_header();
 				<h2 class="english">Campaigns & Projects</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1387) ): ?>
 						<?php while( have_rows('repeater', 1387) ): the_row();
@@ -315,7 +315,7 @@ get_header();
 				<h2 class="english">Online Education</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1388) ): ?>
 						<?php while( have_rows('repeater', 1388) ): the_row();
@@ -350,7 +350,7 @@ get_header();
 				<h2 class="english">Governmental Organizations</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1390) ): ?>
 						<?php while( have_rows('repeater', 1390) ): the_row();
@@ -385,7 +385,7 @@ get_header();
 				<h2 class="english">Queer & feminist DJ collectives & events</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1389) ): ?>
 						<?php while( have_rows('repeater', 1389) ): the_row();
@@ -420,7 +420,7 @@ get_header();
 				<h2 class="english">Environment</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1391) ): ?>
 						<?php while( have_rows('repeater', 1391) ): the_row();
@@ -455,7 +455,7 @@ get_header();
 				<h2 class="english">Workshops on DJing, Music Production & Mastering for queer & FINTA+ people</h2>
 			</button>
 
-			<div class="panel letmeseeit">
+			<div class="panel">
 				<div class="within">
 					<?php if( have_rows('repeater', 1392) ): ?>
 						<?php while( have_rows('repeater', 1392) ): the_row();

@@ -31,7 +31,7 @@ get_header();
 		<section class="glossar">
 
 			<button class="accordion">
-				<span>A</span>
+				<h3>A</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -59,7 +59,7 @@ get_header();
 			</div>
 
 		    <button class="accordion">
-				<span>B</span>
+				<h3>B</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -87,7 +87,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>C</span>
+				<h3>C</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -115,7 +115,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>D</span>
+				<h3>D</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -143,7 +143,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>E</span>
+				<h3>E</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -171,7 +171,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>F</span>
+				<h3>F</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -199,7 +199,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>G</span>
+				<h3>G</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -227,7 +227,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>H</span>
+				<h3>H</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -255,7 +255,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>I</span>
+				<h3>I</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -283,7 +283,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>J</span>
+				<h3>J</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -311,7 +311,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>K</span>
+				<h3>K</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -339,7 +339,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>L</span>
+				<h3>L</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -367,7 +367,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>M</span>
+				<h3>M</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -395,7 +395,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>N</span>
+				<h3>N</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -423,7 +423,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>O</span>
+				<h3>O</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -451,7 +451,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>P</span>
+				<h3>P</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -479,7 +479,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>Q</span>
+				<h3>Q</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -507,7 +507,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>R</span>
+				<h3>R</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -535,7 +535,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>S</span>
+				<h3>S</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -563,7 +563,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>T</span>
+				<h3>T</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -591,7 +591,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>U</span>
+				<h3>U</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -619,7 +619,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>V</span>
+				<h3>V</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -647,7 +647,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>W</span>
+				<h3>W</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -675,7 +675,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>X</span>
+				<h3>X</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -703,7 +703,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>Y</span>
+				<h3>Y</h3>
 			</button>
 
 			<div class="panel letmeseeit">
@@ -731,7 +731,7 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<span>Z</span>
+				<h3>Z</h3>
 			</button>
 
 			<div class="panel letmeseeit">
