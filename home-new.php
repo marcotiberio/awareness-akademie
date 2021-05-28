@@ -113,6 +113,52 @@ get_header();
 		</section>
 		<?php endif; ?>
 
+		<section class="featured-posts-4">
+
+			<?php
+				$args = array(
+					'post_type' => 'page',
+					'post_parent' => 9,
+					'post_status' => 'publish',
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'posts_per_page' => 4,
+				);
+				$arr_posts = new WP_Query( $args );
+
+				if ( $arr_posts->have_posts() ) :
+
+					while ( $arr_posts->have_posts() ) :
+						$arr_posts->the_post();
+
+						$categories = get_the_category();
+						$cls = '';
+
+						if ( ! empty( $categories ) ) {
+						foreach ( $categories as $cat ) {
+							$cls .= $cat->slug . ' ';
+						}
+						}
+						?>
+
+						<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-image' );?>
+						<article class="<?php echo $cls; ?> " id="post-<?php the_ID(); ?>">
+							<a href="<?php the_permalink(); ?>"><div class="post-thumbnail" id="postThumbnailFront" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: center;"></div></a>
+							<div class="post-info">
+								<small class="post-date"><?php echo get_the_date('d.m.Y'); ?></small>
+								<div class="post-title">
+									<a href="<?php the_permalink(); ?>"><h3><?php print the_title(); ?></h3></a>
+								</div>
+							</div>
+						</article>
+						<?php endwhile; ?>
+
+					<!-- reset global post variable. After this point, we are back to the Main Query object -->
+					<?php wp_reset_postdata(); ?>
+
+				<?php endif;?>
+		</section>
+
 		<?php
 		$hero_image = get_field('hero_image');
 		if( $hero_image ): ?>
