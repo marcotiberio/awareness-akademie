@@ -201,13 +201,7 @@ get_header();
 									</div>
 									<div class="right"><p><?php the_field('angebote_summary'); ?></p></div>
 								</div>
-								<div class="more-info col-2"><small><?php the_field('angebote_more-info-button'); ?></small></div>
-								<div class="hidden col-2">
-									<div class="content">
-										<?php the_content(); ?>
-										<button class="register" onclick="document.location='<?php the_permalink(); ?>'">Jetzt Anmelden</button>
-									</div>
-								</div>
+								<div class="more-info col-2" onclick="document.location='<?php the_permalink(); ?>'"><small><?php the_field('angebote_more-info-button'); ?></small></div>
 							</article>
 							<?php
 						endwhile;
@@ -251,13 +245,7 @@ get_header();
 									</div>
 									<div class="right"><p><?php the_field('angebote_summary'); ?></p></div>
 								</div>
-								<div class="more-info col-2"><small><?php the_field('angebote_more-info-button'); ?></small></div>
-								<div class="hidden col-2">
-									<div class="content">
-										<?php the_content(); ?>
-										<button class="register" onclick="document.location='<?php the_permalink(); ?>'">Jetzt Anmelden</button>
-									</div>
-								</div>
+								<div class="more-info col-2" onclick="document.location='<?php the_permalink(); ?>'"><small><?php the_field('angebote_more-info-button'); ?></small></div>
 							</article>
 							<?php
 						endwhile;

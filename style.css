@@ -2057,7 +2057,7 @@ section.swiper {
 
 .page-template-roundtables .post-grid .col-2,
 .page-template-angebote .post-grid .col-2 {
-	display: block;
+	display: grid;
 	grid-template-columns: 1fr 1fr;
 	column-gap: 40px;
 	place-items: flex-start;
@@ -3812,6 +3812,16 @@ summary:hover {
 	.col-4 {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.page-template-roundtables .post-grid .col-2, 
+	.page-template-angebote .post-grid .col-2 {
+		display: grid;
+		grid-template-columns: 1fr;
+		column-gap: 40px;
+		place-items: flex-start;
+		padding: 0;
+		border: 0 !important;
 	}
 
 	.col-4 {
