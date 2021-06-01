@@ -194,16 +194,15 @@ get_header();
 							?>
 							
 							<article class="" id="post-<?php the_ID(); ?>">
-								<div class="visible col-3">
+								<div class="visible col-2">
 									<div class="left">
-										<h1 class="post-date"><?php the_field('angebote_date'); ?></h1>
-										<a class="post-title" href="<?php the_permalink(); ?>"><h1><?php print the_title(); ?></h1></a>
+										<p class="post-date"><?php the_field('angebote_date'); ?></p>
+										<a class="post-title" href="<?php the_permalink(); ?>"><h3><?php the_field('angebote_subtitle'); ?></h3></a>
 									</div>
-									<div class="center"><p><?php the_field('angebote_subtitle'); ?></p></div>
 									<div class="right"><p><?php the_field('angebote_summary'); ?></p></div>
 								</div>
-								<div class="more-info col-3"><small><?php the_field('angebote_more-info-button'); ?></small></div>
-								<div class="hidden col-3">
+								<div class="more-info col-2"><small><?php the_field('angebote_more-info-button'); ?></small></div>
+								<div class="hidden col-2">
 									<div class="content">
 										<?php the_content(); ?>
 										<button class="register" onclick="document.location='<?php the_permalink(); ?>'">Jetzt Anmelden</button>
@@ -245,16 +244,15 @@ get_header();
 							?>
 							
 							<article class="" id="post-<?php the_ID(); ?>">
-								<div class="visible col-3">
+								<div class="visible col-2">
 									<div class="left">
-										<h1 class="post-date"><?php the_field('angebote_date'); ?></h1>
-										<a class="post-title" href="<?php the_permalink(); ?>"><h1><?php print the_title(); ?></h1></a>
+										<p class="post-date"><?php the_field('angebote_date'); ?></p>
+										<a class="post-title" href="<?php the_permalink(); ?>"><h3><?php the_field('angebote_subtitle'); ?></h3></a>
 									</div>
-									<div class="center"><p><?php the_field('angebote_subtitle'); ?></p></div>
 									<div class="right"><p><?php the_field('angebote_summary'); ?></p></div>
 								</div>
-								<div class="more-info col-3"><small><?php the_field('angebote_more-info-button'); ?></small></div>
-								<div class="hidden col-3">
+								<div class="more-info col-2"><small><?php the_field('angebote_more-info-button'); ?></small></div>
+								<div class="hidden col-2">
 									<div class="content">
 										<?php the_content(); ?>
 										<button class="register" onclick="document.location='<?php the_permalink(); ?>'">Jetzt Anmelden</button>

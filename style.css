@@ -2055,12 +2055,13 @@ section.swiper {
 	margin-left: 3vw;
 }
 
-.page-template-roundtables .post-grid .col-3,
-.page-template-angebote .post-grid .col-3 {
-	display: grid;
-	grid-template-columns: 1fr 1fr 2fr;
+.page-template-roundtables .post-grid .col-2,
+.page-template-angebote .post-grid .col-2 {
+	display: block;
+	grid-template-columns: 1fr 1fr;
 	column-gap: 40px;
 	place-items: flex-start;
+	padding: 0;
 	border: 0 !important;
 }
 
@@ -3026,7 +3027,7 @@ summary:hover {
 
 	.page-template-roundtables .post-grid .more-info,
 	.page-template-angebote .post-grid .more-info {
-		padding: 0 3vw 5% 3vw;
+		padding: 0 0 5% 0;
 	}
 
 	/*--------------------------------------------------------------
@@ -3491,7 +3492,7 @@ summary:hover {
 
 	.page-template-roundtables .post-grid .more-info,
 	.page-template-angebote .post-grid .more-info {
-		padding: 0 3vw 5% 3vw;
+		padding: 0 0 5% 0;
 	}
 
 	.page-template-roundtables .post-grid .hidden .register,
