@@ -346,8 +346,8 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<h2 class="german">Staatliche Organisationen</h2>
-				<h2 class="english">Governmental Organizations</h2>
+				<h2 class="german">Queere & feministische DJ Kollektive & Veranstaltungen</h2>
+				<h2 class="english">Queer & feminist DJ collectives & events</h2>
 			</button>
 
 			<div class="panel">
@@ -381,8 +381,8 @@ get_header();
 			</div>
 
 			<button class="accordion">
-				<h2 class="german">Queere & feministische DJ Kollektive & Veranstaltungen</h2>
-				<h2 class="english">Queer & feminist DJ collectives & events</h2>
+				<h2 class="german">Staatliche Organisationen</h2>
+				<h2 class="english">Governmental Organizations</h2>
 			</button>
 
 			<div class="panel">

@@ -173,7 +173,7 @@ get_header();
 					<div class="sectiontitle">
 						<div class="title german"><small>KOMMENDE</small></div>
 						<div class="title english"><small>COMING</small></div>
-						<section class="hero" style="background-image: url('/wp-content/uploads/2021/03/AWA_Gradient_web-scaled.jpg');"></section>
+						<section class="hero" style="background-image: url('https://awareness-akademie.de/wp-content/uploads/sites/14/2021/03/AWA_Gradient_web-scaled-1.jpg');"></section>
 					</div>
 					<?php
 					$today = date('Y-m-d', strtotime('+2 hours'));
@@ -202,7 +202,7 @@ get_header();
 							<article class="" id="post-<?php the_ID(); ?>">
 								<div class="visible col-3">
 									<div class="left">
-										<h1 class="post-date"><?php the_field('roundtable_date'); ?></h1>
+										<p class="post-date"><?php the_field('roundtable_date'); ?></p>
 										<a class="post-title" href="<?php the_permalink(); ?>"><h1><?php print the_title(); ?></h1></a>
 									</div>
 									<div class="center"><p><?php the_field('roundtable_subtitle'); ?></p></div>
@@ -253,7 +253,7 @@ get_header();
 							<article class="" id="post-<?php the_ID(); ?>">
 								<div class="visible col-3">
 									<div class="left">
-										<h1 class="post-date"><?php the_field('roundtable_date'); ?></h1>
+										<p class="post-date"><?php the_field('roundtable_date'); ?></p>
 										<a class="post-title" href="<?php the_permalink(); ?>"><h1><?php print the_title(); ?></h1></a>
 									</div>
 									<div class="center"><p><?php the_field('roundtable_subtitle'); ?></p></div>

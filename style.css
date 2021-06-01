@@ -1870,7 +1870,7 @@ section.swiper {
 
 .featured-posts-2 {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+	grid-template-columns: repeat(2, 1fr);
 	grid-auto-rows: auto;
 	grid-template-rows: auto;
 	column-gap: 40px;
@@ -1928,6 +1928,10 @@ section.swiper {
 	grid-template-columns: 1fr 4fr;
 	grid-template-rows: auto;
 	column-gap: 20px;
+}
+
+.featured-posts-3 .post-info h3 {
+	margin-block-end: 0;
 }
 
 .featured-posts-4 .post-info {
@@ -1993,7 +1997,7 @@ section.swiper {
 }
 
 .page-template-home-new .featured-posts-4 {
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-columns: repeat(4, 1fr);
 	padding: 0 3vw;
 }
 
@@ -2461,7 +2465,7 @@ input[type=checkbox]:checked ~ label {
 }
 
 /*--------------------------------------------------------------
-# Netwerk
+# Netzwerk
 --------------------------------------------------------------*/
 
 .page-template-netzwerk .secondary small {
@@ -2509,7 +2513,7 @@ summary:hover {
 	margin-bottom: 10vh;
 }
 
-/* NEW */
+/* Netzwerk New */
 
 .page-template-netzwerk-new .netzwerk .accordion {
 	border: none;
@@ -2518,6 +2522,14 @@ summary:hover {
 	padding: 25px 3vw;
 	width: 100%;
 	text-align: left;
+}
+
+.page-template-netzwerk-new .netzwerk:nth-last-child(1) {
+	margin-bottom: 20px !important;
+}
+
+.page-template-netzwerk-new .netzwerk .accordion:hover {
+	text-decoration: underline;
 }
 
 .page-template-netzwerk-new .netzwerk .accordion h2 {
@@ -3027,6 +3039,15 @@ summary:hover {
 
 	.single .entry-title {
 		line-height: 4rem;
+	}
+
+	/*--------------------------------------------------------------
+	## Home
+	--------------------------------------------------------------*/
+
+	.page-template-home-new .featured-posts-4 {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0 3vw;
 	}
 
 }
@@ -3885,6 +3906,24 @@ summary:hover {
 	.blob-layer__2,
 	.blob-layer__3 {
 		display: none;
+	}
+
+	.page-template-home-new .featured-posts-4 {
+		grid-template-columns: 1fr;
+		padding: 0 3vw;
+	}
+
+	/*--------------------------------------------------------------
+	## Projekte
+	--------------------------------------------------------------*/
+
+	.featured-posts-2 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-auto-rows: auto;
+		grid-template-rows: auto;
+		column-gap: 40px;
+		row-gap: 0;
 	}
 
 	/*--------------------------------------------------------------
