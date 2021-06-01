@@ -2524,12 +2524,12 @@ summary:hover {
 	text-align: left;
 }
 
-.page-template-netzwerk-new .netzwerk:nth-last-child(1) {
-	margin-bottom: 20px !important;
-}
-
 .page-template-netzwerk-new .netzwerk .accordion:hover {
 	text-decoration: underline;
+}
+
+.page-template-netzwerk-new section:nth-last-child(1) {
+    margin-bottom: 0;
 }
 
 .page-template-netzwerk-new .netzwerk .accordion h2 {
