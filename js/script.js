@@ -62,7 +62,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $("#resetFilters").click(function () {
+    $(".resetFilters").click(function () {
         $(".repeater .inner").show();
         $(".filter .filtercheck").prop('checked', false);
     });
@@ -103,11 +103,18 @@ $(document).ready(function () {
 // Slide Toggle
 
 $(document).ready(function () {
-    $(".more-info").click(function () {
+    $(".page-template-roundtables .more-info").click(function () {
         $(this).next('div').first().slideToggle("fast");
         $(this).next('div').first().css("display", "grid");
     });
 });
+
+// $(document).ready(function () {
+//     $(".more-info").click(function () {
+//         $(this).next('div').first().slideToggle("fast");
+//         $(this).next('div').first().css("display", "grid");
+//     });
+// });
 
 
 
