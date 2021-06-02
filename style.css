@@ -2974,9 +2974,9 @@ summary:hover {
 		width: 100vw;
 		height: 100vh;
 		margin-top: 0;
-		background-image: url(/wp-content/uploads/2021/03/hero.png);
+		/* background-image: url(/wp-content/uploads/2021/03/hero.png);
 		background-size: cover;
-		background-position: center;
+		background-position: center; */
 	}
 
 	.blob-layer__2,
