@@ -167,7 +167,6 @@ get_header();
 					<div class="sectiontitle">
 						<div class="title german"><small>KOMMENDE</small></div>
 						<div class="title english"><small>COMING</small></div>
-						<section class="hero" style="background-image: url('https://awareness-akademie.de/wp-content/uploads/sites/14/2021/03/AWA_Gradient_web-scaled-1.jpg');"></section>
 					</div>
 					<?php
 					$today = date('Y-m-d', strtotime('+2 hours'));
@@ -208,6 +207,7 @@ get_header();
 					endif; 
 					?>
 				</section>
+				<section class="hero" style="background-image: url('https://awareness-akademie.de/wp-content/uploads/sites/14/2021/03/AWA_Gradient_web-scaled-1.jpg');"></section>
 				<section class="past">
 					<div class="sectiontitle">
 						<div class="title german"><small>VERGANGENE</small></div>
