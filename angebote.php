@@ -191,11 +191,13 @@ get_header();
 						while ( $arr_posts->have_posts() ) :
 							$arr_posts->the_post();
 							?>
-							
 							<article class="" id="post-<?php the_ID(); ?>">
 								<div class="visible col-2">
 									<div class="left">
-										<p class="post-date"><?php the_field('angebote_date'); ?></p>
+										<span class="post-date"><?php the_field('angebote_date'); ?></span>
+										<?php if( get_field('text_ongoing_event') ): ?>
+											<span class="post-date"> (<?php the_field('text_ongoing_event'); ?>)</span>
+										<?php endif; ?>
 										<a class="post-title" href="<?php the_permalink(); ?>"><h3><?php the_field('angebote_subtitle'); ?></h3></a>
 									</div>
 									<div class="right"><p><?php the_field('angebote_summary'); ?></p></div>
@@ -240,7 +242,10 @@ get_header();
 							<article class="" id="post-<?php the_ID(); ?>">
 								<div class="visible col-2">
 									<div class="left">
-										<p class="post-date"><?php the_field('angebote_date'); ?></p>
+										<span class="post-date"><?php the_field('angebote_date'); ?></span>
+										<?php if( get_field('text_ongoing_event') ): ?>
+											<span class="post-date"> (<?php the_field('text_ongoing_event'); ?>)</span>
+										<?php endif; ?>
 										<a class="post-title" href="<?php the_permalink(); ?>"><h3><?php the_field('angebote_subtitle'); ?></h3></a>
 									</div>
 									<div class="right"><p><?php the_field('angebote_summary'); ?></p></div>

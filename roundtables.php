@@ -201,7 +201,10 @@ get_header();
 							<article class="" id="post-<?php the_ID(); ?>">
 								<div class="visible col-2">
 									<div class="left">
-										<p class="post-date"><?php the_field('roundtable_date'); ?></p>
+										<span class="post-date"><?php the_field('roundtable_date'); ?></span>
+										<?php if( get_field('text_ongoing_event') ): ?>
+											<span class="post-date"> (<?php the_field('text_ongoing_event'); ?>)</span>
+										<?php endif; ?>
 										<a class="post-title" href="<?php the_permalink(); ?>"><h3><?php the_field('roundtable_subtitle'); ?></h3></a>
 									</div>
 									<div class="right"><p><?php the_field('roundtable_summary'); ?></p></div>
@@ -252,7 +255,10 @@ get_header();
 							<article class="" id="post-<?php the_ID(); ?>">
 								<div class="visible col-2">
 									<div class="left">
-										<p class="post-date"><?php the_field('roundtable_date'); ?></p>
+										<span class="post-date"><?php the_field('roundtable_date'); ?></span>
+										<?php if( get_field('text_ongoing_event') ): ?>
+											<span class="post-date"> (<?php the_field('text_ongoing_event'); ?>)</span>
+										<?php endif; ?>
 										<a class="post-title" href="<?php the_permalink(); ?>"><h3><?php the_field('roundtable_subtitle'); ?></h3></a>
 									</div>
 									<div class="right"><p><?php the_field('roundtable_summary'); ?></p></div>
