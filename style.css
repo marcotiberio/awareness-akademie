@@ -2389,6 +2389,23 @@ input[type=checkbox]:checked ~ label {
 	}
 }
 
+.page-template-ressourcen .tertiary .intro.row-2 form {
+	margin-top: 50px;
+}
+
+.page-template-ressourcen .tertiary .intro.row-2 .form .col-3 .entry {
+	border-left: 1px solid #000 !important;
+	border-right: 1px solid #000 !important;
+}
+
+.page-template-ressourcen .tertiary .intro.row-2 .form .col-3 .entry {
+	border-bottom: 0 !important;
+}
+
+.page-template-ressourcen .tertiary .intro.row-2 .form .col-3 input[type="submit"] {
+    justify-content: center;
+}
+
 
 /* NEW */
 
