@@ -1490,6 +1490,12 @@ section.swiper {
 	border-bottom: 1px solid #000000;
 }
 
+.footer-roundtables .col-3,
+.footer-angebote .col-3 {
+	border-bottom: 0;
+	border-top: 0;
+}
+
 .col-3 div {
 	width: 100%;
 	padding: 5% 3vw;
@@ -1811,6 +1817,29 @@ section.swiper {
 .single .form input[type="submit"],
 .single .form input[type="submit"] {
 	border-top: 0;
+}
+
+.footer-roundtables form .col-3 input[type="submit"],
+.footer-angebote form .col-3 input[type="submit"] {
+    text-transform: uppercase;
+	text-align: center;
+    color: #000000;
+    padding: 3vw;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 0;
+    outline: 0;
+    background-color: #ffffff;
+    transition: all 0.2s linear;
+	width: 100%;
+}
+
+.footer-roundtables form .col-3 input[type="submit"]:hover,
+.footer-angebote form .col-3 input[type="submit"]:hover {
+	text-decoration: underline;
+	transition: all 0.2s linear;
 }
 
 .hf-message.hf-message-success {

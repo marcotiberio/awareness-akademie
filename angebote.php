@@ -260,6 +260,12 @@ get_header();
 
 			</section> <!-- .angebote -->
 
+			<section class="footer-angebote">
+				<?php if( get_field('contact_form_footer', 1923) ): ?>
+					<?php the_field('contact_form_footer', 1923); ?>
+				<?php endif; ?>
+			</section>
+
 		</div>
 
 	</main><!-- #main -->
