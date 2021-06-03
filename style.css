@@ -1,7 +1,7 @@
 /*!
 Theme Name: Awareness Akademie - Dev
 Author: Defrost Studio
-Version: 3.4.0
+Version: 3.5.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1681,11 +1681,8 @@ section.swiper {
 	width: 100vw;
 	height: 50vh;
 	background-position: center;
-	/* Center the image */
 	background-repeat: no-repeat;
-	/* Do not repeat the image */
 	background-size: cover;
-	/* Resize the background image to cover the entire container */
 }
 
 .page-template-roundtables .hero,
@@ -1693,13 +1690,12 @@ section.swiper {
 	width: 100vw;
 	height: 50vh;
 	background-position: center;
-	/* Center the image */
 	background-repeat: no-repeat;
-	/* Do not repeat the image */
 	background-size: cover;
-	/* Resize the background image to cover the entire container */
-	border-top: 1px solid black;
-    border-bottom: 1px solid black;
+	/* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+	margin-top: -10vh;
+	margin-bottom: 5vh;
 }
 
 .hero img {
@@ -2081,8 +2077,15 @@ section.swiper {
 
 .page-template-roundtables article,
 .page-template-angebote article {
+	border-bottom: 1px solid #000;
 	margin-bottom: 60px;
 	padding: 20px 3vw;
+}
+
+.page-template-roundtables article:nth-last-child(1),
+.page-template-angebote article:nth-last-child(1) {
+	border-bottom: 0;
+	margin-bottom: 15px;
 }
 
 .page-template-roundtables .post-grid .col-3 div,
