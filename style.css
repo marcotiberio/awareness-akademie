@@ -4227,6 +4227,11 @@ summary:hover {
 		padding-bottom: 0;
 	}
 
+	.page-template-ressourcen .tertiary .intro.row-2 form {
+		border-bottom: 1px solid #000 !important;
+		border-top: 1px solid #000 !important;
+	}
+
 	.page-template-ressourcen .form .col-3 {
 		border: 0;
 	}
