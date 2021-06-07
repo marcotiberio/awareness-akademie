@@ -4223,7 +4223,8 @@ summary:hover {
 	}
 
 	.page-template-ressourcen .form {
-		padding-bottom: 5%;
+		/* padding-bottom: 5%; */
+		padding-bottom: 0;
 	}
 
 	.page-template-ressourcen .form .col-3 {
