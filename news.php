@@ -33,7 +33,7 @@ get_header();
 
 		<section class="featured-posts-3">
 
-			<?php
+			<?php 
 				$args = array(
 					'post_type' => 'news',
 					'post_status' => 'publish',
@@ -42,9 +42,9 @@ get_header();
 					'posts_per_page' => -1,
 				);
 				$arr_posts = new WP_Query( $args );
-
+				
 				if ( $arr_posts->have_posts() ) :
-
+					
 					while ( $arr_posts->have_posts() ) :
 						$arr_posts->the_post();
 
@@ -57,7 +57,7 @@ get_header();
 						}
 						}
 						?>
-
+						
 						<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-image' );?>
 						<article class="<?php echo $cls; ?> " id="post-<?php the_ID(); ?>">
 							<a href="<?php the_permalink(); ?>"><div class="post-thumbnail" id="postThumbnailFront" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: center;"></div></a>
@@ -70,7 +70,7 @@ get_header();
 						</article>
 						<?php
 					endwhile;
-				endif;
+				endif; 
 			?>
 
 

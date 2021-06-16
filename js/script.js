@@ -34,13 +34,6 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".page-template-news  .filters .awareness-akademie-en").click(function () {
-        $(".page-template-news  #primary .awareness-akademie-en").show();
-        $(".page-template-news  #primary article:not([class*='awareness-akademie-en'])").hide();
-    });
-});
-
-$(document).ready(function () {
     $(".page-template-news  .filters .dab").click(function () {
         $(".page-template-news  #primary .dab").show();
         $(".page-template-news  #primary article:not([class*='dab'])").hide();
@@ -48,23 +41,9 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".page-template-news  .filters .dab-en").click(function () {
-        $(".page-template-news  #primary .dab-en").show();
-        $(".page-template-news  #primary article:not([class*='dab-en'])").hide();
-    });
-});
-
-$(document).ready(function () {
     $(".page-template-news  .filters .sexism-free-night").click(function () {
         $(".page-template-news  #primary .sexism-free-night").show();
         $(".page-template-news  #primary article:not([class*='sexism-free-night'])").hide();
-    });
-});
-
-$(document).ready(function () {
-    $(".page-template-news  .filters .sexism-free-night-en").click(function () {
-        $(".page-template-news  #primary .sexism-free-night-en").show();
-        $(".page-template-news  #primary article:not([class*='sexism-free-night-en'])").hide();
     });
 });
 
