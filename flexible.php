@@ -106,9 +106,9 @@ get_header();
 					<section class="col-1">
 						<div class="header">
 							<small><?php the_sub_field('title'); ?></small>
-							<?php 
+							<?php
 							$link = get_sub_field('link_to_all');
-							if( $link ): 
+							if( $link ):
 								$link_url = $link['url'];
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';

@@ -13,7 +13,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $("page-template-ressourcen #resetFilters").click(function () {
+    $("page-template-ressourcen .resetFilters").click(function () {
         $("page-template-ressourcen .repeater .inner").show();
         $("page-template-ressourcen .filters .filtercheck").prop('checked', false);
     });
