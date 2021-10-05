@@ -1,7 +1,7 @@
 /*!
 Theme Name: Awareness Akademie - Dev
 Author: Defrost Studio
-Version: 2021.07.26
+Version: 2021.10.05
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1941,6 +1941,11 @@ section.swiper {
 	row-gap: 40px;
 }
 
+.home .featured-posts-3 article {
+	display: block;
+	padding: 0px;
+}
+
 .featured-posts-2 article:hover .post-thumbnail,
 .featured-posts-3 article:hover .post-thumbnail,
 .featured-posts-4 article:hover .post-thumbnail {
@@ -1969,6 +1974,10 @@ section.swiper {
 	column-gap: 20px;
 }
 
+.home .featured-posts-3 .post-info {
+	margin-top: 20px;
+}
+
 .featured-posts-3 .post-info h3 {
 	margin-block-end: 0;
 }
@@ -1983,8 +1992,8 @@ section.swiper {
 .featured-posts-2 .post-title h3,
 .featured-posts-3 .post-title h3,
 .featured-posts-4 .post-title h3 {
-	text-transform: uppercase;
-	overflow-wrap: anywhere;
+	text-transform: none;
+	overflow-wrap: break-word;
 }
 
 .page-template-news .featured-posts-3 .post-title h3,
