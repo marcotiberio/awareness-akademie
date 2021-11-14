@@ -106,9 +106,9 @@ get_header();
 					<section class="col-1">
 						<div class="header">
 							<small><?php the_sub_field('title'); ?></small>
-							<?php 
+							<?php
 							$link = get_sub_field('link_to_all');
-							if( $link ): 
+							if( $link ):
 								$link_url = $link['url'];
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
@@ -127,6 +127,44 @@ get_header();
 				<?php if( get_row_layout() == 'hero_image' ): ?>
 					<section class="hero" style="background-image: url('<?php the_sub_field('image'); ?>');"></section>
 				<?php endif; ?>
+				<?php if( get_row_layout() == 'downloads' ): ?>
+				<section class="downloads">
+					<div class="repeater">
+						<?php if( have_rows('repeater') ): ?>
+							<?php while( have_rows('repeater') ): the_row();
+								$title = get_sub_field('title');
+								$link = get_sub_field('link');
+								$type = get_sub_field('type');
+								$category = get_sub_field('category');
+								$tags = get_sub_field('tags');
+								?>
+								<div class="inner <?php the_sub_field('category'); ?>">
+									<article class="header">
+										<small><?php the_sub_field('type'); ?></small>
+										<small><?php the_sub_field('category'); ?></small>
+									</article>
+									<div class="title">
+										<?php
+										$link = get_sub_field('title');
+										if( $link ):
+											$link_url = $link['url'];
+											$link_title = $link['title'];
+											$link_target = $link['target'] ? $link['target'] : '_self';
+										?>
+										<h3><a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></h3>
+										<?php endif; ?>
+									</div>
+									<?php if( get_sub_field('tags') ): ?>
+									<div class="tags">
+										<small><?php the_sub_field('tags'); ?></small>
+									</div>
+									<?php endif; ?>
+								</div>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</div>
+				</section>
+			<?php endif; ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
 	</main><!-- #main -->
