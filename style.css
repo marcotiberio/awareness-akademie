@@ -2464,7 +2464,10 @@ input[type=checkbox]:checked ~ label {
 --------------------------------------------------------------*/
 
 .page-template-glossar .glossar-filter {
-	padding: 0 3vw;
+	padding: 0 3vw 10px 3vw;
+	position: sticky;
+	top: 110px;
+	background-color: #fff;
 }
 
 .page-template-glossar .glossar-filter .grid {
@@ -3154,6 +3157,10 @@ summary:hover {
 	/*--------------------------------------------------------------
 	## Glossar
 	--------------------------------------------------------------*/
+
+	.page-template-glossar .glossar-filter {
+		top: 70px;
+	}
 
 	.page-template-glossar .glossar-filter .grid {
 		display: flex;
