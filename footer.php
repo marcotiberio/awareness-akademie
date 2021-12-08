@@ -17,6 +17,7 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<?php

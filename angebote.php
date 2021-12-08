@@ -163,6 +163,54 @@ get_header();
 
 			<section class="post-grid">
 
+				<section class="ongoing">
+					<div class="sectiontitle">
+						<div class="title german"><small>LAUFEND</small></div>
+						<div class="title english"><small>ONGOING</small></div>
+					</div>
+					<?php
+					$today = date('Y-m-d', strtotime('+2 hours'));
+
+					$args = array (
+						'post_type' => 'angebote',
+						'posts_per_page' => -1,
+						'meta_key' => 'angebote_ongoing_start_date',
+						'orderby' => 'meta_value',
+						'order' => 'DESC',
+						'meta_query' => array(
+							'key' => 'ongoing_event',
+							'value' => 1,
+							'compare' => '=',
+							'type' => 'NUMERIC'
+						)
+					);
+					$arr_posts = new WP_Query( $args );
+					
+					if ( $arr_posts->have_posts() ) :
+						
+						while ( $arr_posts->have_posts() ) :
+							$arr_posts->the_post();
+							?>
+							<article class="" id="post-<?php the_ID(); ?>">
+								<div class="visible col-2">
+									<div class="left">
+										<?php if( get_field('angebote_ongoing_start_date') ): ?>
+											<span class="post-date"><?php the_field('angebote_ongoing_start_date'); ?></span>
+										<?php endif; ?>
+										<?php if( get_field('angebote_ongoing_end_date') ): ?>
+											<span class="post-date">- <?php the_field('angebote_ongoing_end_date'); ?></span>
+										<?php endif; ?>
+										<a class="post-title" href="<?php the_permalink(); ?>"><h3><?php the_field('angebote_subtitle'); ?></h3></a>
+									</div>
+									<div class="right"><p><?php the_field('angebote_summary'); ?></p></div>
+								</div>
+								<div class="more-info col-2" onclick="document.location='<?php the_permalink(); ?>'"><small><?php the_field('angebote_more-info-button'); ?></small></div>
+							</article>
+							<?php
+						endwhile;
+					endif; 
+					?>
+				</section>
 				<section class="future">
 					<div class="sectiontitle">
 						<div class="title german"><small>KOMMENDE</small></div>
@@ -178,10 +226,19 @@ get_header();
 						'orderby' => 'meta_value',
 						'order' => 'DESC',
 						'meta_query' => array(
-							'key' => 'angebote_date',
-							'value' => $today,
-							'compare' => '>=',
-							'type' => 'DATE'
+							'relation' => 'AND',
+							array(
+								'key' => 'angebote_date',
+								'value' => $today,
+								'compare' => '>=',
+								'type' => 'DATE'
+							),
+							array(
+								'key' => 'ongoing_event',
+								'value' => 0,
+								'compare' => '=',
+								'type' => 'NUMERIC'
+							  )
 						)
 					);
 					$arr_posts = new WP_Query( $args );

@@ -1,3 +1,12 @@
+$(".dimensionen .term").click(function(){
+    $(this).next(".dimensionen .definition").fadeToggle();
+});
+
+$("#closeOverlay").click(function(){
+    $("#overlay").fadeOut();
+});
+
+
 // Swiper
 
 var swiper = new Swiper('.swiper-container', {
@@ -34,6 +43,13 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    $(".page-template-news  .filters .awareness-akademie-en").click(function () {
+        $(".page-template-news  #primary .awareness-akademie-en").show();
+        $(".page-template-news  #primary article:not([class*='awareness-akademie-en'])").hide();
+    });
+});
+
+$(document).ready(function () {
     $(".page-template-news  .filters .dab").click(function () {
         $(".page-template-news  #primary .dab").show();
         $(".page-template-news  #primary article:not([class*='dab'])").hide();
@@ -41,9 +57,23 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+    $(".page-template-news  .filters .dab-en").click(function () {
+        $(".page-template-news  #primary .dab-en").show();
+        $(".page-template-news  #primary article:not([class*='dab-en'])").hide();
+    });
+});
+
+$(document).ready(function () {
     $(".page-template-news  .filters .sexism-free-night").click(function () {
         $(".page-template-news  #primary .sexism-free-night").show();
         $(".page-template-news  #primary article:not([class*='sexism-free-night'])").hide();
+    });
+});
+
+$(document).ready(function () {
+    $(".page-template-news  .filters .sexism-free-night-en").click(function () {
+        $(".page-template-news  #primary .sexism-free-night-en").show();
+        $(".page-template-news  #primary article:not([class*='sexism-free-night-en'])").hide();
     });
 });
 
@@ -88,6 +118,7 @@ $(document).ready(function () {
     $("#menuToggle").click(function () {
         $(".menu-main-menu-container").slideToggle("fast");
         $(".menu-main-menu-english-container").slideToggle("fast");
+        $(".menu-main-menu-en-container").slideToggle("fast");
         $(".swiper").toggle();
         $("html").toggleClass('no-scroll');
     });

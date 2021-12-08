@@ -1490,6 +1490,67 @@ section.swiper {
 	border-bottom: 1px solid #000000;
 }
 
+.page-navigation ul {
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	list-style: none;
+	margin-bottom: 55px;
+	margin-top: 0;
+	padding: 0;
+}
+
+.page-navigation ul li {
+	margin-right: 30px;
+	text-transform: uppercase;
+}
+
+.col-3.blocksandlogos {
+	margin-bottom: 0;
+    margin-top: 150px;
+	place-items: stretch;
+}
+
+.col-3.blocksandlogos .logo {
+	border-right: 0;
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3); 
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+	margin: 0 auto;
+    transform: translateY(-100px);
+	height: 150px;
+}
+
+.col-3.blocksandlogos .title {
+	text-transform: uppercase;
+}
+
+.dimensionen {
+	margin-bottom: 55px;
+}
+
+.dimensionen .col-2 {
+    grid-template-columns: 1fr 4fr;
+	padding: 20px 3vw;
+}
+
+.dimensionen .col-2:not(:last-child) {
+    border-bottom: 1px solid #000;
+}
+
+.dimensionen .term .header p {
+    margin-block-end: 0;
+    margin-bottom: 0;
+}
+
+.dimensionen .definition {
+    display: none;
+}
+
+.overlay {
+	display: none;
+}
+
 .footer-roundtables .col-3,
 .footer-angebote .col-3 {
 	border-bottom: 0;
@@ -3194,6 +3255,13 @@ summary:hover {
 		padding: 0 3vw;
 	}
 
+	/**//**//**/
+
+	.dimensionen .definition {
+		margin-block-start: 26px;
+		margin-top: 26px;
+	}
+
 }
 
 
@@ -4082,6 +4150,18 @@ summary:hover {
 		row-gap: 0;
 	}
 
+	.acf-map {
+		width: 100%;
+		height: 400px;
+		border: #ccc solid 1px;
+		margin: 20px 0;
+	}
+
+	/* fixes potential theme css conflict */
+	.acf-map img {
+		max-width: inherit !important;
+	}
+	
 	/*--------------------------------------------------------------
 	## Glossar
 	--------------------------------------------------------------*/
@@ -4355,6 +4435,50 @@ summary:hover {
 
 	.single .col-3 div {
 		padding: 0;
+	}
+
+	/*--------------------------------------------------------------
+	## Special Page
+	--------------------------------------------------------------*/
+
+	.page-navigation ul {
+		justify-content: flex-start;
+	}
+
+	.overlay {
+		background-color: #d75332;
+		bottom: 0;
+		display: block;
+		left: 10%;
+		margin: 0 auto;
+		padding: 0 20px;
+		position: fixed;
+		width: 80%;
+	}
+
+	.overlay .logo {
+		transform: translate(-50px, -50px);
+		width: 120px;
+	}
+
+	.overlay .content {
+		transform: translate(0px, -40px);
+	}
+
+	.overlay .title {
+		text-align: center;
+	}
+
+	.overlay .button h3 {
+		padding: 20px;
+		background-color: #967de8;
+		text-align: center;
+	}
+
+	.overlay #closeOverlay {
+		padding: 20px;
+		background-color: #f4cf46;
+		text-align: center;
 	}
 
 }

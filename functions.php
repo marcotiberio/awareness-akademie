@@ -154,11 +154,14 @@ function awareness_akademie_scripts() {
 	wp_enqueue_script('swiper', 'https://unpkg.com/swiper/swiper-bundle.js', array(), null, true);
 	wp_enqueue_script('swiper-min', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
 	wp_enqueue_script('tweenmax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js', array(), null, true);
+	// wp_enqueue_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCiPuWhk93qaBfNd28DpJY_ZyGNEgtoiYw', array(), null, true);
 
 	wp_enqueue_script( 'awareness-akademie-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'awareness-akademie-blob', get_template_directory_uri() . '/js/blob.js', array(), _S_VERSION, true );
 	// wp_enqueue_script( 'awareness-akademie-ressourcen-filters', get_template_directory_uri() . '/js/ressourcen-filters.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'awareness-akademie-script', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true );
+	// wp_enqueue_script( 'googlemaps-js', get_template_directory_uri() . '/js/googlemaps.js', array(), _S_VERSION, false );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -194,6 +197,21 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 
+// // Method 1: Filter.
+function my_acf_google_map_api( $api ){
+	
+	$api['key'] = 'AIzaSyCiPuWhk93qaBfNd28DpJY_ZyGNEgtoiYw';
+	
+	return $api;
+	
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+// Method 2: Setting.
+// function my_acf_init() {
+//     acf_update_setting('google_api_key', 'AIzaSyCiPuWhk93qaBfNd28DpJY_ZyGNEgtoiYw');
+// }
+// add_action('acf/init', 'my_acf_init');
 
 /*
 * Creating a function to create our News
