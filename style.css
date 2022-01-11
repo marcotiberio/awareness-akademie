@@ -1289,6 +1289,13 @@ footer .menu-footer-menu-container {
 	align-items: center;
 }
 
+footer .menu-footer-menu-english-container {
+	width: 100vw;
+	display: grid;
+	place-items: flex-end;
+	align-items: center;
+}
+
 footer .clubcommission {
 	width: 426px;
 }
@@ -2517,6 +2524,78 @@ input[type=checkbox]:checked ~ label {
 	text-transform: capitalize;
 } */
 
+/*--------------------------------------------------------------
+# Glossar New
+--------------------------------------------------------------*/
+
+.page-template-glossarnew .glossar-filter {
+	padding: 0 3vw 10px 3vw;
+	position: sticky;
+	top: 110px;
+	background-color: #fff;
+}
+
+.page-template-glossarnew .glossar-filter .grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.page-template-glossarnew .glossar-filter .filter {
+	border-left: 1px solid #000;
+	color: #000;
+	flex-grow: 1;
+	padding: 0;
+	text-align: center;
+
+}
+
+.page-template-glossarnew .glossar-filter .filter:nth-last-child(1) {
+	border-right: 1px solid #000;
+}
+
+.page-template-glossarnew .glossar-filter .filter:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+.page-template-glossarnew .glossar {
+	padding: 0 3vw;
+}
+
+.page-template-glossarnew .accordion {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 97vw;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+
+.page-template-glossarnew button:hover {
+    color: #000000;
+}
+
+.page-template-glossarnew .panel .within {
+    display: block;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    /* max-height: 0; */
+    background-color: transparent;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+    border-bottom: 1px solid #000000;
+}
 
 /*--------------------------------------------------------------
 # Glossar
@@ -3027,6 +3106,13 @@ summary:hover {
 		flex-wrap: wrap;
 	}
 
+	footer .menu-footer-menu-english-container {
+		width: 97vw;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
 	footer ul {
 		width: 97vw;
 		list-style: none;
@@ -3214,6 +3300,25 @@ summary:hover {
 	}
 
 	/*--------------------------------------------------------------
+	## Glossar New
+	--------------------------------------------------------------*/
+
+	.page-template-glossarnew .glossar-filter {
+		top: 70px;
+	}
+
+	.page-template-glossarnew .glossar-filter .grid {
+		display: flex;
+		flex-flow: row nowrap;
+		overflow: scroll;
+		padding: 0;
+	}
+
+	.page-template-glossarnew .glossar-filter .grid .filter {
+        padding: 0 10px;
+    }
+
+	/*--------------------------------------------------------------
 	## Glossar
 	--------------------------------------------------------------*/
 
@@ -3370,6 +3475,13 @@ summary:hover {
 	}
 
 	footer .menu-footer-menu-container {
+		width: 97vw;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	footer .menu-footer-menu-english-container {
 		width: 97vw;
 		display: flex;
 		flex-direction: column;
@@ -3662,6 +3774,14 @@ summary:hover {
 	}
 
 	/*--------------------------------------------------------------
+	## Glossar New
+	--------------------------------------------------------------*/
+
+	.page-template-glossarnew .panel .within {
+		margin-top: 0;
+	}
+
+	/*--------------------------------------------------------------
 	## Glossar
 	--------------------------------------------------------------*/
 
@@ -3936,6 +4056,13 @@ summary:hover {
 	}
 
 	footer .menu-footer-menu-container {
+		width: 97vw;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	footer .menu-footer-menu-english-container {
 		width: 97vw;
 		display: flex;
 		flex-direction: column;
@@ -4381,6 +4508,14 @@ summary:hover {
 
 	.page-template-ressourcen .form .submit {
 		border-bottom: 0 !important;
+	}
+
+	/*--------------------------------------------------------------
+	## Glossar New
+	--------------------------------------------------------------*/
+
+	.page-template-glossarnew .panel .within {
+		margin-top: 0;
 	}
 
 	/*--------------------------------------------------------------
