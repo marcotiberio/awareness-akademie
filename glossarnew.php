@@ -75,7 +75,7 @@ get_header();
 										?>
 										<div class="col-4">
 											<div></div>
-											<article class="term"><?php the_sub_field('term'); ?></article>
+											<article class="term" id="<?php the_sub_field('term'); ?>"><?php the_sub_field('term'); ?></article>
 											<article class="description"><?php the_sub_field('definition'); ?></article>
 										</div>
 									<?php endwhile; ?>
