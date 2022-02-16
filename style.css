@@ -2335,6 +2335,9 @@ section.swiper {
 }
 
 .page-template-ressourcen .entry-header .filters .filter {
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: 10px;
 	padding: 0 0 0 30px;
 }
 
@@ -2362,6 +2365,7 @@ section.swiper {
 [type="checkbox"]:checked+label {
 	position: relative;
 	padding-left: 1.5em;
+	padding-top: 5px;
 	cursor: pointer;
 }
 
@@ -4454,6 +4458,14 @@ summary:hover {
 		flex-wrap: wrap;
 		justify-content: flex-end;
 		place-items: flex-start;
+	}
+
+	[type="checkbox"]:not(:checked)+label, 
+	[type="checkbox"]:checked+label {
+		position: relative;
+		padding-left: 0.5em;
+		cursor: pointer;
+		padding-top: 5px;
 	}
 
 	.page-template-ressourcen .entry-header .filters small {
