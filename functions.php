@@ -410,3 +410,69 @@ function custom_post_type_offers() {
 	*/
 	 
 	add_action( 'init', 'custom_post_type_offers', 0 );
+
+
+/*
+* Creating a function to create our Ressourcen
+*/
+ 
+function custom_post_type_resources() {
+ 
+	// Set UI labels for Custom Post Type
+		$labels = array(
+			'name'                => _x( 'Ressourcen', 'Post Type General Name', 'awareness-akademie' ),
+			'singular_name'       => _x( 'Ressource', 'Post Type Singular Name', 'awareness-akademie' ),
+			'menu_name'           => __( 'Ressourcen', 'awareness-akademie' ),
+			'parent_item_colon'   => __( 'Parent Item', 'awareness-akademie' ),
+			'all_items'           => __( 'All Items', 'awareness-akademie' ),
+			'view_item'           => __( 'View Item', 'awareness-akademie' ),
+			'add_new_item'        => __( 'Add New Item', 'awareness-akademie' ),
+			'add_new'             => __( 'Add New', 'awareness-akademie' ),
+			'edit_item'           => __( 'Edit Item', 'awareness-akademie' ),
+			'update_item'         => __( 'Update Item', 'awareness-akademie' ),
+			'search_items'        => __( 'Search Item', 'awareness-akademie' ),
+			'not_found'           => __( 'Not Found', 'awareness-akademie' ),
+			'not_found_in_trash'  => __( 'Not found in Trash', 'awareness-akademie' ),
+		);
+		 
+	// Set other options for Custom Post Type
+		 
+		$args = array(
+			'label'               => __( 'Ressourcen', 'awareness-akademie' ),
+			'description'         => __( 'Ressourcen news and reviews', 'awareness-akademie' ),
+			'labels'              => $labels,
+			// Features this CPT supports in Post Editor
+			'supports'            => array( 'title', 'custom-fields', ),
+			// You can associate this CPT with a taxonomy or custom taxonomy. 
+			'taxonomies'  => array( 'category' ),
+			/* A hierarchical CPT is like Pages and can have
+			* Parent and child items. A non-hierarchical CPT
+			* is like Posts.
+			*/ 
+			'hierarchical'        => false,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_nav_menus'   => true,
+			'show_in_admin_bar'   => true,
+			'menu_position'       => 8,
+			'can_export'          => true,
+			'has_archive'         => false,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'post',
+			'show_in_rest' => true,
+	 
+		);
+		 
+		// Registering your Custom Post Type
+		register_post_type( 'resource', $args );
+	 
+	}
+	 
+	/* Hook into the 'init' action so that the function
+	* Containing our post type registration is not 
+	* unnecessarily executed. 
+	*/
+	 
+	add_action( 'init', 'custom_post_type_resources', 0 );

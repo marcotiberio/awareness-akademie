@@ -98,6 +98,27 @@ $(document).ready(function () {
     });
 });
 
+// Filters Ressourcen Grid
+
+$(document).ready(function () {
+    $("button").click(function () {
+        $(".ressourcen .inner").hide();
+        $(".filter").each(function () {
+            var filter1 = $(this).find('.filtercheck').attr('id');
+            if ($(this).find('input.filtercheck:checked').length > 0) {
+                $('.' + filter1).show();
+            }
+        });
+    });
+});
+
+$(document).ready(function () {
+    $(".resetFilters").click(function () {
+        $(".ressourcen .inner").show();
+        $(".filter .filtercheck").prop('checked', false);
+    });
+});
+
 // $(document).ready(function () {
 //     $(".filters .ableismus").click(function () {
 //         $(".repeater .ableismus").show();

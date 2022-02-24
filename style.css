@@ -2296,7 +2296,8 @@ section.swiper {
 # Ressourcen
 --------------------------------------------------------------*/
 
-.page-template-ressourcen .entry-header {
+.page-template-ressourcen .entry-header,
+.page-template-ressourcen-grid .entry-header {
 	display: flex;
 	flex-direction: row;
 	grid-template-columns: 1fr 1fr;
@@ -2306,25 +2307,30 @@ section.swiper {
 	text-transform: uppercase;
 }
 
-.page-template-ressourcen .entry-header summary {
+.page-template-ressourcen .entry-header summary,
+.page-template-ressourcen-grid .entry-header summary {
 	text-align: right;
 }
 
-.page-template-ressourcen .entry-header summary:hover {
+.page-template-ressourcen .entry-header summary:hover,
+.page-template-ressourcen-grid .entry-header summary:hover {
 	cursor: pointer;
 	text-decoration: underline;
 }
 
-.page-template-ressourcen .entry-header .resetFilters:hover {
+.page-template-ressourcen .entry-header .resetFilters:hover,
+.page-template-ressourcen-grid .entry-header .resetFilters:hover {
 	cursor: pointer;
 	text-decoration: underline;
 }
 
-.page-template-ressourcen .entry-header .applyFilters {
+.page-template-ressourcen .entry-header .applyFilters,
+.page-template-ressourcen-grid .entry-header .applyFilters {
 	float: right;
 }
 
-.page-template-ressourcen .entry-header .filters {
+.page-template-ressourcen .entry-header .filters,
+.page-template-ressourcen-grid .entry-header .filters {
 	grid-column-start: 1;
 	display: flex;
 	flex-direction: row;
@@ -2334,20 +2340,23 @@ section.swiper {
 	place-items: flex-start;
 }
 
-.page-template-ressourcen .entry-header .filters .filter {
+.page-template-ressourcen .entry-header .filters .filter,
+.page-template-ressourcen-grid .entry-header .filters .filter {
 	display: flex;
 	flex-flow: row wrap;
 	margin-bottom: 10px;
 	padding: 0 0 0 30px;
 }
 
-.page-template-ressourcen .entry-header .filters small {
+.page-template-ressourcen .entry-header .filters small,
+.page-template-ressourcen-grid .entry-header .filters small {
 	margin-left: 0;
 	line-height: 1rem;
 	transition: all 0.2s linear;
 }
 
-.page-template-ressourcen .entry-header .filters small:hover {
+.page-template-ressourcen .entry-header .filters small:hover,
+.page-template-ressourcen-grid .entry-header .filters small:hover {
 	cursor: pointer;
 	text-decoration: underline;
 }
@@ -2449,11 +2458,13 @@ input[type=checkbox]:checked ~ label {
 	text-decoration: underline;
 } */
 
-.page-template-ressourcen .title {
+.page-template-ressourcen .title,
+.page-template-ressourcen-grid .title {
 	margin-top: 26px;
 }
 
-.page-template-ressourcen details[open] summary~* {
+.page-template-ressourcen details[open] summary~*,
+.page-template-ressourcen-grid details[open] summary~* {
 	animation: sweep .1s ease-in-out;
 }
 
@@ -2469,26 +2480,31 @@ input[type=checkbox]:checked ~ label {
 	}
 }
 
-.page-template-ressourcen .tertiary .intro.row-2 form {
+.page-template-ressourcen .tertiary .intro.row-2 form,
+.page-template-ressourcen-grid .tertiary .intro.row-2 form {
 	margin-top: 50px;
 	border-left: 1px solid #000 !important;
 	border-right: 1px solid #000 !important;
 }
 
-.page-template-ressourcen .tertiary .intro.row-2 .form .col-3 .entry {
+.page-template-ressourcen .tertiary .intro.row-2 .form .col-3 .entry,
+.page-template-ressourcen-grid .tertiary .intro.row-2 .form .col-3 .entry {
 	/* border-left: 1px solid #000 !important;
 	border-right: 1px solid #000 !important; */
 }
 
-.page-template-ressourcen .tertiary .intro.row-2 .form .col-3 .entry {
+.page-template-ressourcen .tertiary .intro.row-2 .form .col-3 .entry,
+.page-template-ressourcen-grid .tertiary .intro.row-2 .form .col-3 .entry {
 	border-bottom: 0 !important;
 }
 
-.page-template-ressourcen .tertiary .intro.row-2 .form .col-3 input[type="submit"] {
+.page-template-ressourcen .tertiary .intro.row-2 .form .col-3 input[type="submit"],
+.page-template-ressourcen-grid .tertiary .intro.row-2 .form .col-3 input[type="submit"] {
     justify-content: center;
 }
 
-.page-template-ressourcen .tertiary .form .col-2 input[type="submit"] {
+.page-template-ressourcen .tertiary .form .col-2 input[type="submit"],
+.page-template-ressourcen-grid .tertiary .form .col-2 input[type="submit"] {
     width: 100%;
     height: 100%;
     display: flex;
@@ -2506,27 +2522,26 @@ input[type=checkbox]:checked ~ label {
 
 /* NEW */
 
-/* .page-template-ressourcen section.ressourcen {
+.page-template-ressourcen-grid .grid {
 	border-top: 0;
-	border-bottom: 0;
-
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-	grid-template-rows: auto;
-
-	border-top: 1px solid black;
-	border-left: 1px solid black;
+    border-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-rows: auto;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
 }
 
-.page-template-ressourcen section.ressourcen article {
+.page-template-ressourcen-grid .grid article {
 	border-bottom: 1px solid black;
     border-right: 1px solid black;
     padding: 5% 3vw;
 }
 
-.page-template-ressourcen section.ressourcen article .post-tags {
-	text-transform: capitalize;
-} */
+.page-template-ressourcen-grid .grid .header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
 
 /*--------------------------------------------------------------
 # Glossar New
@@ -3856,7 +3871,8 @@ summary:hover {
 	## Ressourcen
 	--------------------------------------------------------------*/
 
-	.page-template-ressourcen .form input[type="submit"] {
+	.page-template-ressourcen .form input[type="submit"],
+	.page-template-ressourcen-grid .form input[type="submit"] {
 		width: fit-content;
 		height: fit-content;
 		display: flex;
@@ -3894,15 +3910,18 @@ summary:hover {
 		width: 94vw;
 	}
 
-	.page-template-ressourcen .form {
+	.page-template-ressourcen .form,
+	.page-template-ressourcen-grid .form {
 		padding-bottom: 5%;
 	}
 
-	.page-template-ressourcen .form .col-3 {
+	.page-template-ressourcen .form .col-3,
+	.page-template-ressourcen-grid .form .col-3 {
 		border: 0;
 	}
 
-	.page-template-ressourcen .form .submit {
+	.page-template-ressourcen .form .submit,
+	.page-template-ressourcen-grid .form .submit {
 		border-bottom: 0 !important;
 	}
 
@@ -4443,7 +4462,8 @@ summary:hover {
 	## Ressourcen
 	--------------------------------------------------------------*/
 
-	.page-template-ressourcen .entry-header {
+	.page-template-ressourcen .entry-header,
+	.page-template-ressourcen-grid .entry-header {
 		text-transform: uppercase;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -4451,7 +4471,8 @@ summary:hover {
 		padding: 0 3vw;
 	}
 
-	.page-template-ressourcen .entry-header .filters {
+	.page-template-ressourcen .entry-header .filters,
+	.page-template-ressourcen-grid .entry-header .filters {
 		grid-column-start: 2;
 		display: flex;
 		flex-direction: row;
@@ -4468,18 +4489,21 @@ summary:hover {
 		padding-top: 5px;
 	}
 
-	.page-template-ressourcen .entry-header .filters small {
+	.page-template-ressourcen .entry-header .filters small,
+	.page-template-ressourcen-grid .entry-header .filters small {
 		margin-left: 20px;
 		line-height: 1rem;
 		transition: all 0.2s linear;
 	}
 
-	.page-template-ressourcen .entry-header .filters small:hover {
+	.page-template-ressourcen .entry-header .filters small:hover,
+	.page-template-ressourcen-grid .entry-header .filters small:hover {
 		cursor: pointer;
 		text-decoration: underline;
 	}
 
-	.page-template-ressourcen .form input[type="submit"] {
+	.page-template-ressourcen .form input[type="submit"],
+	.page-template-ressourcen-grid .form input[type="submit"] {
 		width: fit-content;
 		height: fit-content;
 		display: flex;
@@ -4504,21 +4528,25 @@ summary:hover {
 		border-right: 0;
 	}
 
-	.page-template-ressourcen .form {
+	.page-template-ressourcen .form,
+	.page-template-ressourcen-grid .form {
 		/* padding-bottom: 5%; */
 		padding-bottom: 0;
 	}
 
-	.page-template-ressourcen .tertiary .intro.row-2 form {
+	.page-template-ressourcen .tertiary .intro.row-2 form,
+	.page-template-ressourcen-grid .tertiary .intro.row-2 form {
 		border-bottom: 1px solid #000 !important;
 		border-top: 1px solid #000 !important;
 	}
 
-	.page-template-ressourcen .form .col-3 {
+	.page-template-ressourcen .form .col-3,
+	.page-template-ressourcen-grid .form .col-3 {
 		border: 0;
 	}
 
-	.page-template-ressourcen .form .submit {
+	.page-template-ressourcen .form .submit,
+	.page-template-ressourcen-grid .form .submit {
 		border-bottom: 0 !important;
 	}
 
