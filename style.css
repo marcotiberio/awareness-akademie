@@ -1227,7 +1227,7 @@ footer a {
 	text-decoration-color: #ffffff !important;
 }
 
-footer ul {
+footer #footer-menu {
 	width: 100vw;
 	list-style: none;
 	margin: 0;
@@ -3132,7 +3132,7 @@ summary:hover {
 		flex-wrap: wrap;
 	}
 
-	footer ul {
+	footer #footer-menu {
 		width: 97vw;
 		list-style: none;
 		margin: 0;
@@ -3507,7 +3507,7 @@ summary:hover {
 		flex-wrap: wrap;
 	}
 
-	footer ul {
+	footer #footer-menu {
 		width: 97vw;
 		list-style: none;
 		margin: 0;
@@ -4092,7 +4092,7 @@ summary:hover {
 		flex-wrap: wrap;
 	}
 
-	footer ul {
+	footer #footer-menu {
 		width: 97vw;
 		list-style: none;
 		margin: 0;
