@@ -264,6 +264,13 @@ get_header();
 							</label>
 						</li>
 						<li class="filter">
+							<input type="checkbox" class="filtercheck" id="klassismus" />
+							<label for="klassismus">
+								<small class="klassismus german">klassismus</small>
+								<small class="klassismus english">classism</small>
+							</label>
+						</li>
+						<li class="filter">
 							<input type="checkbox" class="filtercheck" id="klima" />
 							<label for="klima">
 								<small class="klima german">klima</small>
