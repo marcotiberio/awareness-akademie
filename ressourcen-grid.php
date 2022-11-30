@@ -208,6 +208,13 @@ get_header();
 							</label>
 						</li>
 						<li class="filter">
+							<input type="checkbox" class="filtercheck" id="code_of_conduct" />
+							<label for="code_of_conduct">
+								<small class="community german">code_of_conduct</small>
+								<small class="community english">code_of_conduct</small>
+							</label>
+						</li>
+						<li class="filter">
 							<input type="checkbox" class="filtercheck" id="community" />
 							<label for="community">
 								<small class="community german">community</small>
