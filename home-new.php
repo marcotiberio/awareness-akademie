@@ -19,17 +19,17 @@ get_header();
 
 		<?php
 		$bubbles = get_field('bubbles');
-		if( $bubbles ): ?>
+		if( isset($bubbles) ): ?>
 			<section class="blob">
-				<div class="blob-layer blob-layer__0" data-blob-disallow="y" data-blob-deep="1000" style="background-image: url('<?php echo esc_url( $bubbles['background_bubble']['url'] ); ?>')"></div>
-				<div class="blob-layer blob-layer__1" data-blob-deep="60" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer1']['url'] ); ?>')"></div>
-				<div class="blob-layer blob-layer__2" data-blob-deep="120" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer2']['url'] ); ?>')"></div>
-				<div class="blob-layer blob-layer__3" data-blob-deep="180" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer3']['url'] ); ?>')"></div>
-				<div class="blob-layer blob-layer__4" data-blob-deep="240" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer4']['url'] ); ?>')"></div>
-				<div class="blob-layer blob-layer__5" data-blob-deep="300" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer5']['url'] ); ?>')"></div>
-				<div class="blob-layer blob-layer__6" data-blob-deep="360" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer6']['url'] ); ?>')"></div>
-				<div class="blob-layer blob-layer__7" data-blob-deep="420" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer7']['url'] ); ?>')"></div>
-				<div class="blob-layer blob-layer__8" data-blob-deep="480" style="background-image: url('<?php echo esc_url( $bubbles['bubble_layer8']['url'] ); ?>')"></div>
+				<div class="blob-layer blob-layer__0" data-blob-disallow="y" data-blob-deep="1000" style="background-image: url('<?php echo is_array($bubbles['background_bubble']) ? esc_url( $bubbles['background_bubble']['url'] ) : ''; ?>')"></div>
+				<div class="blob-layer blob-layer__1" data-blob-deep="60" style="background-image: url('<?php echo is_array($bubbles['bubble_layer1']) ? esc_url( $bubbles['bubble_layer1']['url'] ) : ''; ?>')"></div>
+				<div class="blob-layer blob-layer__2" data-blob-deep="120" style="background-image: url('<?php echo is_array($bubbles['bubble_layer2']) ? esc_url( $bubbles['bubble_layer2']['url'] ) : ''; ?>')"></div>
+				<div class="blob-layer blob-layer__3" data-blob-deep="180" style="background-image: url('<?php echo is_array($bubbles['bubble_layer3']) ? esc_url( $bubbles['bubble_layer3']['url'] ) : ''; ?>')"></div>
+				<div class="blob-layer blob-layer__4" data-blob-deep="240" style="background-image: url('<?php echo is_array($bubbles['bubble_layer4']) ? esc_url( $bubbles['bubble_layer4']['url'] ) : ''; ?>')"></div>
+				<div class="blob-layer blob-layer__5" data-blob-deep="300" style="background-image: url('<?php echo is_array($bubbles['bubble_layer5']) ? esc_url( $bubbles['bubble_layer5']['url'] ) : ''; ?>')"></div>
+				<div class="blob-layer blob-layer__6" data-blob-deep="360" style="background-image: url('<?php echo is_array($bubbles['bubble_layer6']) ? esc_url( $bubbles['bubble_layer6']['url'] ) : ''; ?>')"></div>
+				<div class="blob-layer blob-layer__7" data-blob-deep="420" style="background-image: url('<?php echo is_array($bubbles['bubble_layer7']) ? esc_url( $bubbles['bubble_layer7']['url'] ) : ''; ?>')"></div>
+				<div class="blob-layer blob-layer__8" data-blob-deep="480" style="background-image: url('<?php echo is_array($bubbles['bubble_layer8']) ? esc_url( $bubbles['bubble_layer8']['url'] ) : ''; ?>')"></div>
 				<h1 class="hero-title"><?php echo $bubbles['hero_text']; ?></h1>
 			</section>
 		<?php endif; ?>
