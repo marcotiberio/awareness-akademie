@@ -174,7 +174,7 @@ get_header();
 					$args = array (
 						'post_type' => 'angebote',
 						'posts_per_page' => -1,
-						'meta_key' => 'angebote_ongoing_start_date',
+						'meta_key' => 'ongoing_event',
 						'orderby' => 'meta_value',
 						'order' => 'DESC',
 						'meta_query' => array(
@@ -193,12 +193,10 @@ get_header();
 							?>
 							<article class="" id="post-<?php the_ID(); ?>">
 								<div class="visible col-2">
-									<div class="left">
-										<?php if( get_field('angebote_ongoing_start_date') ): ?>
-											<span class="post-date"><?php the_field('angebote_ongoing_start_date'); ?></span>
-										<?php endif; ?>
-										<?php if( get_field('angebote_ongoing_end_date') ): ?>
-											<span class="post-date">- <?php the_field('angebote_ongoing_end_date'); ?></span>
+								<div class="left">
+										<span class="post-date"><?php the_field('angebote_date'); ?></span>
+										<?php if( get_field('text_ongoing_event') ): ?>
+											<span class="post-date"> (<?php the_field('text_ongoing_event'); ?>)</span>
 										<?php endif; ?>
 										<a class="post-title" href="<?php the_permalink(); ?>"><h3><?php the_field('angebote_subtitle'); ?></h3></a>
 									</div>
