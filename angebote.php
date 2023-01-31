@@ -222,7 +222,7 @@ get_header();
 						'posts_per_page' => -1,
 						'meta_key' => 'angebote_date',
 						'orderby' => 'meta_value',
-						'order' => 'DESC',
+						'order' => 'ASC',
 						'meta_query' => array(
 							'relation' => 'AND',
 							array(
