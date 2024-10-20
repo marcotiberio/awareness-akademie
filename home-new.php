@@ -191,6 +191,14 @@ get_header();
 		</section>
 		<?php endif; ?>
 
+		<?php
+		$textimage = get_field('textimage');
+		if( $textimage ): ?>
+		<section class="call-to-action row-2">
+			<?php echo $textimage['text_image']; ?>
+		</section>
+		<?php endif; ?>
+
 	</main><!-- #main -->
 
 <?php

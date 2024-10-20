@@ -30,6 +30,17 @@ $(document).ready(function () { // antiracism
     });
 });
 
+$(document).ready(function () { // antiracism
+    $(".filters .antisemitismus").click(function () {
+        $(".repeater .antisemitismus").show();
+        $(".repeater .inner:not([class*='antisemitismus'])").hide();
+    });
+    $(".filters .antiracism").click(function () {
+        $(".repeater .antiracism").show();
+        $(".repeater .inner:not([class*='antiracism'])").hide();
+    });
+});
+
 $(document).ready(function () { // ableismus
     $(".filters .ableismus").click(function () {
         $(".repeater .ableismus").show();
