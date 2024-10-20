@@ -148,7 +148,7 @@ function awareness_akademie_scripts() {
 	wp_style_add_data( 'awareness-akademie-style', 'rtl', 'replace' );
 
 	wp_deregister_script( 'jquery' );
-	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), null, true);
+	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), null, true);
 	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-migrate-3.3.2.min.js', array(), null, true);
 
 	wp_enqueue_script('swiper', 'https://unpkg.com/swiper/swiper-bundle.js', array(), null, true);

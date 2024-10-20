@@ -179,6 +179,13 @@ get_header();
 							</label>
 						</li>
 						<li class="filter">
+							<input type="checkbox" class="filtercheck" id="antimuslimischerRassismus" />
+							<label for="antimuslimischerRassismus">
+								<small class="antimuslimischerRassismus german">antimuslimischer rassismus</small>
+								<small class="antimuslimischerRassismus english">anti-Muslim racism</small>
+							</label>
+						</li>
+						<li class="filter">
 							<input type="checkbox" class="filtercheck" id="antirassismus" />
 							<label for="antirassismus">
 								<small class="antirassismus german">antirassismus</small>
