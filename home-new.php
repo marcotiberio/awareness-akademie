@@ -188,14 +188,7 @@ get_header();
 		<section class="call-to-action row-2">
 			<h1><?php echo $outro['header']; ?></h1>
 			<p><?php echo $outro['sub_header']; ?></p>
-		</section>
-		<?php endif; ?>
-
-		<?php
-		$textimage = get_field('textimage');
-		if( $textimage ): ?>
-		<section class="call-to-action row-2">
-			<?php echo $textimage['text_image']; ?>
+			<div><?php echo $outro['text_editor']; ?></div>
 		</section>
 		<?php endif; ?>
 

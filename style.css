@@ -1277,7 +1277,7 @@ footer ul li:nth-child(4) {
 }
 
 footer ul li:nth-child(5) {
-	order: 7;
+	order: 5;
 }
 
 footer .wpml-ls-menu-item {
@@ -1285,7 +1285,7 @@ footer .wpml-ls-menu-item {
 }
 
 footer ul li:nth-child(6) {
-	order: 6;
+	order: 7;
 }
 
 footer ul li:nth-child(7) {
