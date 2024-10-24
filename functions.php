@@ -142,9 +142,9 @@ add_action( 'widgets_init', 'awareness_akademie_widgets_init' );
  */
 function awareness_akademie_scripts() {
 	wp_enqueue_style( 'awareness-akademie-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style( 'hamburger-css', get_template_directory_uri() . '/assets/css/hamburger.css', 'all');
-//	wp_enqueue_style( 'swiper-css', get_template_directory_uri().'/assets/css/swiper-bundle.css', 'all');
-	wp_enqueue_style( 'swiper-min-css', get_template_directory_uri().'/assets/css/swiper-bundle.min.css', 'all');
+	wp_enqueue_style( 'hamburger-css', get_template_directory_uri() . '/assets/css/hamburger.css', array(), _S_VERSION, 'all');
+//	wp_enqueue_style( 'swiper-css', get_template_directory_uri().'/assets/css/swiper-bundle.css', array(), _S_VERSION, 'all');
+	wp_enqueue_style( 'swiper-min-css', get_template_directory_uri().'/assets/css/swiper-bundle.min.css', array(), _S_VERSION, 'all');
     wp_enqueue_style( 'animate-min-css', get_template_directory_uri().'/assets/css/animate.min.css', array(), _S_VERSION, 'all');
 	wp_style_add_data( 'awareness-akademie-style', 'rtl', 'replace' );
 
