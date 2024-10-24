@@ -148,8 +148,8 @@ function awareness_akademie_scripts() {
 	wp_style_add_data( 'awareness-akademie-style', 'rtl', 'replace' );
 
 //	wp_deregister_script( 'jquery' );
-//	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), null, true);
-//	wp_enqueue_script('jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.3.2.min.js', array(), null, true);
+//	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '3.7.1', true);
+//	wp_enqueue_script('jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.3.2.min.js', array(), '3.3.2', true);
 
 //	wp_enqueue_script('swiper', get_template_directory_uri() . '/js/swiper-bundle.js', array(), '11.1.14', true);
 	wp_enqueue_script('swiper-min', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), '11.1.14', true);
