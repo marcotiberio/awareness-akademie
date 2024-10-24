@@ -143,26 +143,16 @@ add_action( 'widgets_init', 'awareness_akademie_widgets_init' );
 function awareness_akademie_scripts() {
 	wp_enqueue_style( 'awareness-akademie-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'hamburger-css', get_template_directory_uri() . '/assets/css/hamburger.css', array(), _S_VERSION, 'all');
-//	wp_enqueue_style( 'swiper-css', get_template_directory_uri().'/assets/css/swiper-bundle.css', array(), _S_VERSION, 'all');
 	wp_enqueue_style( 'swiper-min-css', get_template_directory_uri().'/assets/css/swiper-bundle.min.css', array(), _S_VERSION, 'all');
     wp_enqueue_style( 'animate-min-css', get_template_directory_uri().'/assets/css/animate.min.css', array(), _S_VERSION, 'all');
 	wp_style_add_data( 'awareness-akademie-style', 'rtl', 'replace' );
 
-//	wp_deregister_script( 'jquery' );
-//	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '3.7.1', true);
-//	wp_enqueue_script('jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.3.2.min.js', array(), '3.3.2', true);
-
-//	wp_enqueue_script('swiper', get_template_directory_uri() . '/js/swiper-bundle.js', array(), '11.1.14', array('in_footer' => true,'strategy'  => 'async'));
 	wp_enqueue_script('swiper-min', get_template_directory_uri() . '/js/swiper-bundle.min.js', array(), '11.1.14', array('in_footer' => true,'strategy'  => 'async'));
 	wp_enqueue_script('tweenmax', get_template_directory_uri() . '/js/TweenMax.min.js', array(), '1.19.1', array('in_footer' => true,'strategy'  => 'async'));
-	// wp_enqueue_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCiPuWhk93qaBfNd28DpJY_ZyGNEgtoiYw', array(), null, true);
 
 	wp_enqueue_script( 'awareness-akademie-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, array('in_footer' => true,'strategy'  => 'async') );
 	wp_enqueue_script( 'awareness-akademie-blob', get_template_directory_uri() . '/js/blob.js', array(), _S_VERSION, array('in_footer' => true,'strategy'  => 'async') );
-	// wp_enqueue_script( 'awareness-akademie-ressourcen-filters', get_template_directory_uri() . '/js/ressourcen-filters.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'awareness-akademie-script', get_template_directory_uri() . '/js/script.js', array('jquery','swiper-min'), _S_VERSION, array('in_footer' => true,'strategy'  => 'defer') );
-	// wp_enqueue_script( 'googlemaps-js', get_template_directory_uri() . '/js/googlemaps.js', array(), _S_VERSION, false );
-
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
