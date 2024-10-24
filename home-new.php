@@ -188,7 +188,7 @@ get_header();
 		<section class="call-to-action row-2">
 			<h1><?php echo $outro['header']; ?></h1>
 			<p><?php echo $outro['sub_header']; ?></p>
-			<div><?php echo $outro['text_editor']; ?></div>
+			<div style="grid-row-start: 3; grid-column-start: 2; margin-top: 50px;"><?php echo $outro['text_editor']; ?></div>
 		</section>
 		<?php endif; ?>
 
