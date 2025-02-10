@@ -1233,7 +1233,7 @@ footer #footer-menu {
 	width: 100vw;
 	list-style: none;
 	margin: 0;
-	padding: 0 0.5vw 0 3vw;
+	padding: 10px 0.5vw 10px 3vw;
 
 	/* display: grid; */
 	display: flex;
@@ -1307,7 +1307,7 @@ footer .menu-footer-menu-english-container {
 }
 
 footer .clubcommission {
-	width: 426px;
+	width: 300px;
 }
 
 section {
