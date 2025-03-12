@@ -19,6 +19,7 @@
 
 
 	<footer id="colophon" class="site-footer">
+		<easy-speech></easy-speech>
 		<div class="site-info">
 			<?php
 			wp_nav_menu(
