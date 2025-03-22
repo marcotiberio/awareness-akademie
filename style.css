@@ -4003,6 +4003,10 @@ summary:hover {
   --------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
 
+	.eyeAble_topFixedPosition {
+		bottom: 25% !important;
+	}
+
 	html {
 		font-size: 75%;
 	}
